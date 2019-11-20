@@ -1,0 +1,370 @@
+.site {
+    background-color: $light-blue;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    min-width: 800px;
+
+    .site-header {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 1em;
+
+        @include center-block;
+
+        .site-branding {
+            .custom-logo-link {
+                float: left;
+                margin: 0 1rem 0 -1rem;
+                width: 80px;
+            }
+
+            .site-title {
+                margin: 0;
+                clear: none;
+
+                a, a:visited, a:hover {
+                    color: $blue;
+                    text-decoration: none;
+                }
+            }
+
+            .site-description {
+                color: $dark-grey;
+                margin: 0;
+            }
+        }
+
+        .main-navigation {
+            li {
+                padding: 0.5rem;
+                margin-right: 0.25rem;
+            }
+
+            li, a, a:visited {
+                background-color: $blue;
+                color: $light-blue;
+            }
+
+            a:hover {
+                background-color: $light-blue;
+                color: $blue;
+            }
+        }
+    }
+
+    .site-content {
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 2em;
+
+        @include center-block;
+        background-color: $blue;
+
+        article {
+            background-color: $white;
+            margin-right: 3em;
+
+            header {
+                background-color: $light-blue;
+
+                a, a:visited {
+                    color: $blue;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $blue;
+                    text-decoration: underline;
+                }
+
+                h1, h2 {
+                    color: $blue;
+                    margin-bottom: 0;
+                    padding-left: 1rem;
+                    padding-top: 1rem;
+                }
+
+                .entry-meta {
+                    color: $dark-grey;
+                    padding-bottom: 1rem;
+                    padding-left: 1rem;
+                }
+            }
+
+            .post-thumbnail {
+                max-height: 250px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .entry-summary, .entry-content, .entry-footer {
+                margin: 0;
+                padding: 1rem;
+                font-family: $font__main;
+            }
+
+            .entry-content {
+                color: $grey;
+            }
+
+            .entry-footer {
+                color: light-grey;
+                @include font-size(0.8);
+                text-align: right;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        .category-dream-diary {
+            header {
+                background-color: $light-grey;
+
+                a, a:visited {
+                    color: $dark-grey;
+                }
+
+                a:hover {
+                    color: $dark-grey;
+                }
+
+                h1, h2 {
+                    color: $dark-grey;
+                }
+            }
+        }
+
+        .category-language {
+            header {
+                background-color: $light-red;
+
+                a, a:visited {
+                    color: $red;
+                }
+
+                a:hover {
+                    color: $red;
+                }
+
+                h1, h2 {
+                    color: $red;
+                }
+            }
+        }
+
+        .category-minecraft-modding {
+            header {
+                background-color: $light-green;
+
+                a, a:visited {
+                    color: $green;
+                }
+
+                a:hover {
+                    color: $green;
+                }
+
+                h1, h2 {
+                    color: $green;
+                }
+            }
+        }
+
+        .category-web-development {
+            header {
+                background-color: $orange;
+
+                a, a:visited {
+                    color: $brown;
+                }
+
+                a:hover {
+                    color: $brown;
+                }
+
+                h1, h2 {
+                    color: $brown;
+                }
+            }
+        }
+
+        .widget-area {
+            float: right;
+            overflow: hidden;
+            width: $size__site-sidebar;
+
+            .search-field {
+                border-radius: 0;
+                font-family: $font__main;
+
+                @include center-block;
+            }
+
+            .search-submit {
+                background-color: $light-blue;
+                border: 1px $light-blue solid;
+                border-radius: 0;
+                color: $blue;
+                margin-top: 1em;
+                padding-left: 2em;
+                padding-right: 2em;
+
+                @include center-block;
+            }
+
+            .search-submit:hover {
+                background-color: $blue;
+                color: $light-blue;
+            }
+
+            .widget {
+                .widget-title {
+                    background-color: $light-blue;
+                    color: $blue;
+                    margin-bottom: 0;
+                    padding: 0.5em;
+
+                    @include font-size(0.9);
+                }
+
+                ul {
+                    background-color: $white;
+                    color: $grey;
+                    font-family: $font__main;
+                    list-style: none;
+                    margin: 0;
+                    padding: 1rem;
+
+                    li {
+                        margin: 0.25rem 0;
+                    }
+
+                    @include font-size(0.8);
+                }
+            }
+
+            .widget:nth-child(3) {
+                .widget-title {
+                    background-color: $light-red;
+                    color: $red;
+                }
+            }
+
+            .widget:nth-child(4) {
+                .widget-title {
+                    background-color: $light-green;
+                    color: $green;
+                }
+            }
+
+            .widget:nth-child(5) {
+                .widget-title {
+                    background-color: $orange;
+                    color: $brown;
+                }
+            }
+
+            .widget:nth-child(6) {
+                .widget-title {
+                    background-color: $light-grey;
+                    color: $dark-grey;
+                }
+            }
+
+            .widget:nth-child(7) {
+                .widget-title {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .site-footer {
+        clear: both;
+        color: $light-grey;
+        margin: 3em;
+        width: $size__site-main;
+
+        a, a:visited {
+            color: $blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $blue;
+            text-decoration: underline;
+        }
+    }
+}
+
+.content-area {
+    float: left;
+    margin: 0 (-$size__site-sidebar) 0 0;
+    width: $size__site-main;
+}
+
+.site-main {
+	margin: 0 $size__site-sidebar 0 0;
+}
+
+.comments-area {
+    background-color: $white;
+    margin-bottom: 2em;
+    margin-right: 3em;
+    padding-bottom: 1em;
+
+    .comments-title {
+        background-color: $light-blue;
+        color: $blue;
+        padding: 1rem;
+
+        @include font-size(1);
+    }
+
+    .comment-list, .comment-respond {
+        background-color: $white;
+        color: $grey;
+        font-family: $font__main;
+        list-style: none;
+        margin: 0;
+        padding: 1rem 1rem 0;
+
+        @include font-size(0.8);
+
+        .logged-in-as a:nth-child(2) {
+            display: block;
+        }
+
+        .submit {
+            background-color: $light-blue;
+            border: 1px $light-blue solid;
+            border-radius: 0;
+            color: $blue;
+            margin-top: 1em;
+            padding-left: 2em;
+            padding-right: 2em;
+
+            @include center-block;
+        }
+
+        .submit:hover {
+            background-color: $blue;
+            color: $light-blue;
+        }
+    }
+}
+
+.page-title {
+    color: $light-blue; 
+
+    @include font-size(2);
+}
+
+@import "no-sidebar";
