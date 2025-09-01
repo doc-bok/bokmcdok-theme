@@ -382,6 +382,7 @@ template {
 @font-face {
   font-family: "C64";
   src: url("fonts/Commodore-64-v6.3.TTF") format("truetype");
+  font-display: swap;
 }
 body,
 button,
@@ -868,24 +869,24 @@ a:hover, a:active {
   background-color: #ffffff;
   margin-right: 3em;
 }
-.site .site-content article header {
+.site .site-content article header, .archive-header {
   background-color: #0088FF;
 }
-.site .site-content article header a, .site .site-content article header a:visited {
+.site .site-content article header a, .site .site-content article header a:visited, .archive-header a, , .archive-header a:visited {
   color: #0000AA;
   text-decoration: none;
 }
-.site .site-content article header a:hover {
+.site .site-content article header a:hover, .archive-header a:hover {
   color: #0000AA;
   text-decoration: underline;
 }
-.site .site-content article header h1, .site .site-content article header h2 {
+.site .site-content article header h1, .site .site-content article header h2, .archive-header h1, .archive-header h2 {
   color: #0000AA;
   margin-bottom: 0;
   padding-left: 1rem;
   padding-top: 1rem;
 }
-.site .site-content article header .entry-meta {
+.site .site-content article header .entry-meta, .archive-header .entry-meta {
   color: #333333;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -899,68 +900,22 @@ a:hover, a:active {
 }
 .site .site-content article .entry-summary, .site .site-content article .entry-content, .site .site-content article .entry-footer {
   margin: 0;
-  padding: 1rem;
+  padding: 0 1rem;
   font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .site .site-content article .entry-content {
   color: #777777;
 }
 .site .site-content article .entry-footer {
-  color: light-grey;
+  background-color: #bbbbbb;
+  color: #777777;
   font-size: 12.8px;
   font-size: 0.8rem;
+  padding: 0.5rem;
   text-align: right;
 }
 .site .site-content article .entry-footer span {
   display: block;
-}
-.site .site-content .category-dream-diary header {
-  background-color: #bbbbbb;
-}
-.site .site-content .category-dream-diary header a, .site .site-content .category-dream-diary header a:visited {
-  color: #333333;
-}
-.site .site-content .category-dream-diary header a:hover {
-  color: #333333;
-}
-.site .site-content .category-dream-diary header h1, .site .site-content .category-dream-diary header h2 {
-  color: #333333;
-}
-.site .site-content .category-language header {
-  background-color: #ff7777;
-}
-.site .site-content .category-language header a, .site .site-content .category-language header a:visited {
-  color: #880000;
-}
-.site .site-content .category-language header a:hover {
-  color: #880000;
-}
-.site .site-content .category-language header h1, .site .site-content .category-language header h2 {
-  color: #880000;
-}
-.site .site-content .category-minecraft-modding header {
-  background-color: #aaff66;
-}
-.site .site-content .category-minecraft-modding header a, .site .site-content .category-minecraft-modding header a:visited {
-  color: #00cc55;
-}
-.site .site-content .category-minecraft-modding header a:hover {
-  color: #00cc55;
-}
-.site .site-content .category-minecraft-modding header h1, .site .site-content .category-minecraft-modding header h2 {
-  color: #00cc55;
-}
-.site .site-content .category-web-development header {
-  background-color: #dd8855;
-}
-.site .site-content .category-web-development header a, .site .site-content .category-web-development header a:visited {
-  color: #664400;
-}
-.site .site-content .category-web-development header a:hover {
-  color: #664400;
-}
-.site .site-content .category-web-development header h1, .site .site-content .category-web-development header h2 {
-  color: #664400;
 }
 .site .site-content .widget-area {
   float: right;

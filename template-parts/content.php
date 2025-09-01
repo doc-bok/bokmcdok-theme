@@ -52,8 +52,10 @@
 		endif;
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bokmcdok' ),
+			'before' => '<div class="page-links">',
 			'after'  => '</div>',
+			'seperator' => '|',
+			'next_or_number' => 'next',
 		) );
 		?>
 	</div><!-- .entry-content -->

@@ -103,7 +103,7 @@
 
             .entry-summary, .entry-content, .entry-footer {
                 margin: 0;
-                padding: 1rem;
+                padding: 0 1rem;
                 font-family: $font__main;
             }
 
@@ -112,8 +112,10 @@
             }
 
             .entry-footer {
-                color: light-grey;
+                background-color: $light-grey;
+                color: $grey;
                 @include font-size(0.8);
+                padding: 0.5rem;
                 text-align: right;
 
                 span {

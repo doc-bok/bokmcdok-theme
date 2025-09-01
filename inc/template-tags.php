@@ -119,7 +119,7 @@ if ( ! function_exists( 'bokmcdok_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function bokmcdok_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
@@ -127,7 +127,15 @@ if ( ! function_exists( 'bokmcdok_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					} else {
+						?>
+						<img src="https://www.bokmcdok.com/wp-content/uploads/2023/07/2023-01-14-jpg.webp" alt="<?php the_title(); ?>" />
+				        <?php
+					}
+				?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -135,11 +143,18 @@ if ( ! function_exists( 'bokmcdok_post_thumbnail' ) ) :
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<div class="post-thumbnail">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'post-thumbnail', array(
+					'alt' => the_title_attribute( array(
+						'echo' => false,
+					) ),
+				) );
+			} else {
+				?>
+				<img src="https://www.bokmcdok.com/wp-content/uploads/2023/07/2023-01-14-jpg.webp" />
+			    <?php
+			}
+				
 			?>
 			</div>
 		</a>
