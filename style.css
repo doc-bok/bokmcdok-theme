@@ -1,1218 +1,1245 @@
-/*!
-Theme Name: BokMcDok
-Theme URI: http://underscores.me/
-Author: Doc Bok
-Author URI: http://www.bokmcdok.com
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: bokmcdok
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+:root {
+    /* Color Palette */
+    --blue-primary: #08F;
+    --blue-dark: #00a;
+    --gray-light: #bbb;
+    --gray-lighter: #eee;
+    --gray-dark: #333;
+    --gray-medium: #777;
+    --gray-medium-dark: #6b717f;
+    --green-light: #af6;
+    --green-dark: #0c5;
+    --yellow-light: #ee7;
+    --yellow-highlight: #fff9c0;
+    --red-light: #f77;
+    --red-dark: #800;
+    --orange-light: #d85;
+    --orange-dark: #640;
+}
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-BokMcDok is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
-	 ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    box-sizing: border-box;
 }
 
-/* Sections
-	 ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
-  margin: 0;
+    margin: 0;
+    background: var(--blue-primary);
+    min-width: 0;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
-/* Grouping content
-	 ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+    box-sizing: content-box;
+    height: 1px;
+    overflow: visible;
+    background-color: var(--gray-light);
+    border: 0;
+    margin-bottom: 1.5em;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+    font-family: "Courier 10 Pitch",Courier,monospace;
+    font-size: 15px;
+    background: var(--gray-lighter);
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
 }
 
-/* Text-level semantics
-	 ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
-  background-color: transparent;
+    background-color: transparent;
+    color: var(--blue-dark);
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+    border-bottom: none;
+    text-decoration: underline dotted;
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
+b, strong {
+    font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+code, kbd, samp {
+    font-family: monospace,monospace;
+    font-size: 1em;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
 small {
-  font-size: 80%;
+    font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+    top: -0.5em;
 }
 
-/* Embedded content
-	 ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
 img {
-  border-style: none;
+    border-style: none;
+    height: auto;
+    max-width: 100%;
 }
 
-/* Forms
-	 ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-  /* 1 */
-  overflow: visible;
+button, input {
+    overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none;
+button, select {
+    text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+button, [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText;
 }
 
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+    padding: 0.35em 0.75em 0.625em;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 progress {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 textarea {
-  overflow: auto;
+    overflow: auto;
+    width: 100%;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+    -webkit-appearance: button;
+    font: inherit;
 }
 
-/* Interactive
-	 ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
+details, .menu-toggle, .main-navigation.toggled ul, .site .site-content article .entry-footer span, .comments-area .comment-list .logged-in-as a:nth-child(2), .comments-area .comment-respond .logged-in-as a:nth-child(2), .sticky, .bypostauthor, .infinity-end.neverending .site-footer, .gallery-caption, .logged-in-as a.customize-unpreviewable {
+    display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
 summary {
-  display: list-item;
+    display: list-item;
 }
 
-/* Misc
-	 ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
+template, [hidden], .updated:not(.published), .infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer, .akismet_comment_form_privacy_notice, .children .page_item {
+    display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
-}
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
 @font-face {
-  font-family: "C64";
-  src: url("fonts/Commodore-64-v6.3.TTF") format("truetype");
-  font-display: swap;
-}
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-  color: #6b717f;
-  font-family: "C64", "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
+    font-display: swap;
+    font-family: "C64";
+    src: url("fonts/Commodore-64-v6.3.TTF") format("truetype");
 }
 
-h1, h2, h3, h4, h5, h6 {
-  clear: both;
+body, button, input, select, optgroup, textarea {
+    color: var(--gray-medium-dark);
+    font-family: "C64","Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
 }
 
-p {
-  margin-bottom: 1.5em;
+h1, h2, h3, h4, h5, h6, .clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
+    clear: both;
+}
+
+p, .gallery {
+    margin-bottom: 1.5em;
 }
 
 dfn, cite, em, i {
-  font-style: italic;
+    font-style: italic;
 }
 
 blockquote {
-  margin: 0 1.5em;
+    margin: 0 1.5em;
 }
 
-address {
-  margin: 0 0 1.5em;
-}
-
-pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.6em;
+address, .post, .page {
+    margin: 0 0 1.5em;
 }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+    font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+    font-size: 15px;
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help;
+    border-bottom: 1px dotted var(--gray-medium);
+    cursor: help;
 }
 
 mark, ins {
-  background: #fff9c0;
-  text-decoration: none;
+    background: var(--yellow-highlight);
+    text-decoration: none;
 }
 
 big {
-  font-size: 125%;
+    font-size: 125%;
 }
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
-}
-
-body {
-  background: #0088FF;
-  /* Fallback for when there is no custom background color defined. */
-  min-width: 0;
-}
-
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+    margin: 0 0 1.5em 3em;
 }
 
 ul {
-  list-style: disc;
+    list-style: disc;
 }
 
 ol {
-  list-style: decimal;
+    list-style: decimal;
 }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
+li > ul, li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
 }
 
 dt {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 dd {
-  margin: 0 1.5em 1.5em;
-}
-
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */
+    margin: 0 1.5em 1.5em;
 }
 
 figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */
+    margin: 1em 0;
+    background: var(--gray-light);
+    border-radius: 3px;
+    border: 1px var(--gray-dark) solid;
 }
 
 table {
-  margin: 0 0 1.5em;
-  width: 100%;
+    margin: 0 0 1.5em;
+    width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-button,
-input[type=button],
-input[type=reset],
-input[type=submit] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 0.6em 1em 0.4em;
-}
-button:hover,
-input[type=button]:hover,
-input[type=reset]:hover,
-input[type=submit]:hover {
-  border-color: #ccc #bbb #aaa;
-}
-button:active, button:focus,
-input[type=button]:active,
-input[type=button]:focus,
-input[type=reset]:active,
-input[type=reset]:focus,
-input[type=submit]:active,
-input[type=submit]:focus {
-  border-color: #aaa #bbb #bbb;
+button, input[type=button], input[type=reset], input[type=submit] {
+    background: var(--gray-lighter);
+    border-color: var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
+    border-radius: 3px;
+    border: 1px solid;
+    color: rgba(0,0,0,0.8);
+    font-size: 12px;
+    line-height: 1;
+    padding: 0.6em 1em 0.4em;
 }
 
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password],
-input[type=search],
-input[type=number],
-input[type=tel],
-input[type=range],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=time],
-input[type=datetime],
-input[type=datetime-local],
-input[type=color],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
+button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
+    border-color: var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
 }
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=password]:focus,
-input[type=search]:focus,
-input[type=number]:focus,
-input[type=tel]:focus,
-input[type=range]:focus,
-input[type=date]:focus,
-input[type=month]:focus,
-input[type=week]:focus,
-input[type=time]:focus,
-input[type=datetime]:focus,
-input[type=datetime-local]:focus,
-input[type=color]:focus,
-textarea:focus {
-  color: #111;
+
+button:active, button:focus, input[type=button]:active, input[type=button]:focus, input[type=reset]:active, input[type=reset]:focus, input[type=submit]:active, input[type=submit]:focus {
+    border-color: var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
+}
+
+input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=number], input[type=tel], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], textarea {
+    border-radius: 3px;
+    border: 1px solid var(--gray-light);
+    color: var(--gray-medium);
+    padding: 3px;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=search]:focus, input[type=number]:focus, input[type=tel]:focus, input[type=range]:focus, input[type=date]:focus, input[type=month]:focus, input[type=week]:focus, input[type=time]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=color]:focus, textarea:focus {
+    color: var(--gray-dark);
 }
 
 select {
-  border: 1px solid #ccc;
+    border: 1px solid var(--gray-light);
 }
 
-textarea {
-  width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: #0000AA;
-}
 a:visited {
-  color: #cc44cc;
+    color: var(--gray-medium);
 }
+
 a:hover, a:focus, a:active {
-  color: #0088FF;
+    color: var(--blue-primary);
 }
+
 a:focus {
-  outline: thin dotted;
-}
-a:hover, a:active {
-  outline: 0;
+    outline: thin dotted;
 }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
+a:hover, a:active, #content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
+    clear: both;
     display: block;
-  }
-}
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
+    float: left;
+    width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers. */
+.main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    float: left;
+    left: -999em;
+    position: absolute;
+    top: 100%;
+    z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+}
+
+.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+    left: 100%;
+}
+
+.main-navigation ul ul a {
+    width: 200px;
+}
+
+.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+    left: auto;
+}
+
+.main-navigation li {
+    float: left;
+    position: relative;
+}
+
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+}
+
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
 .screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    border: 0;
+    clip-path: inset(50%);
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
 }
+
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  clip-path: none;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */
+    background-color: var(--gray-lighter);
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+    clip-path: none;
+    clip: auto !important;
+    color: var(--green-dark);
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
 }
 
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-  outline: 0;
-}
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
 .alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 
 .alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
 }
 
 .aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
-  display: table;
-  table-layout: fixed;
+.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
 }
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-  clear: both;
-}
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-.widget select {
-  max-width: 100%;
+    margin: 0;
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
+.widget select {
+    max-width: 100%;
+    font-family: revert;
+}
+
 .site {
-  background-color: #0088FF;
-  margin-right: 10rem;
-  margin-left: 10rem;
-  margin-top: 2rem;
-  min-width: 800px;
+    background-color: var(--blue-primary);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2rem;
+    min-width: 0;
 }
+
 .site .site-header {
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 1em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
+
 .site .site-header .site-branding .custom-logo-link {
-  float: left;
-  margin: 0 1rem 0 -1rem;
-  width: 80px;
+    float: left;
+    margin: 0 1rem 0 -1rem;
+    width: 80px;
 }
+
 .site .site-header .site-branding .site-title {
-  margin: 0;
-  clear: none;
+    clear: none;
+    margin: 0;
 }
-.site .site-header .site-branding .site-title a, .site .site-header .site-branding .site-title a:visited, .site .site-header .site-branding .site-title a:hover {
-  color: #0000AA;
-  text-decoration: none;
+
+.site .site-header .site-branding .site-title a, .site .site-header .site-branding .site-title a:visited, .site .site-header .site-branding .site-title a:hover, .site .site-content article header a, .site .site-content article header a:visited, .archive-header a, .archive-header a:visited, .site .site-footer a, .site .site-footer a:visited {
+    color: var(--blue-dark);
+    text-decoration: none;
 }
+
 .site .site-header .site-branding .site-description {
-  color: #333333;
-  margin: 0;
+    color: var(--gray-dark);
+    margin: 0;
 }
+
 .site .site-header .main-navigation li {
-  padding: 0.5rem;
-  margin-right: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 0.5rem;
 }
-.site .site-header .main-navigation li, .site .site-header .main-navigation a, .site .site-header .main-navigation a:visited {
-  background-color: #0000AA;
-  color: #0088FF;
+
+.site .site-header .main-navigation li, .site .site-header .main-navigation a, .site .site-header .main-navigation a:visited, .site .site-content .widget-area .search-submit:hover, .comments-area .comment-list .submit:hover, .comments-area .comment-respond .submit:hover {
+    background-color: var(--blue-dark);
+    color: var(--blue-primary);
 }
+
 .site .site-header .main-navigation a:hover {
-  background-color: #0088FF;
-  color: #0000AA;
+    background-color: var(--blue-primary);
+    color: var(--blue-dark);
 }
+
 .site .site-content {
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: 2em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #0000AA;
+    background-color: var(--blue-dark);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 2em;
 }
+
 .site .site-content article {
-  background-color: #ffffff;
-  margin-right: 3em;
+    background-color: var(--gray-lighter);
+    margin-right: 3em;
 }
+
 .site .site-content article header, .archive-header {
-  background-color: #0088FF;
+    background-color: var(--blue-primary);
 }
-.site .site-content article header a, .site .site-content article header a:visited, .archive-header a, , .archive-header a:visited {
-  color: #0000AA;
-  text-decoration: none;
+
+.site .site-content article header a:hover, .archive-header a:hover, .site .site-footer a:hover {
+    color: var(--blue-dark);
+    text-decoration: underline;
 }
-.site .site-content article header a:hover, .archive-header a:hover {
-  color: #0000AA;
-  text-decoration: underline;
-}
+
 .site .site-content article header h1, .site .site-content article header h2, .archive-header h1, .archive-header h2 {
-  color: #0000AA;
-  margin-bottom: 0;
-  padding-left: 1rem;
-  padding-top: 1rem;
+    color: var(--blue-dark);
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
+
 .site .site-content article header .entry-meta, .archive-header .entry-meta {
-  color: #333333;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+    color: var(--gray-dark);
+    padding-bottom: 1rem;
+    padding-left: 1rem;
 }
+
 .site .site-content article .post-thumbnail {
-  max-height: 250px;
-  overflow: hidden;
+    max-height: 250px;
+    overflow: hidden;
 }
+
 .site .site-content article .post-thumbnail img {
-  width: 100%;
+    width: 100%;
 }
+
 .site .site-content article .entry-summary, .site .site-content article .entry-content, .site .site-content article .entry-footer {
-  margin: 0;
-  padding: 0 1rem;
-  font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin: 0;
+    padding: 0 1rem;
 }
+
 .site .site-content article .entry-content {
-  color: #777777;
+    color: var(--gray-medium)777;
 }
+
 .site .site-content article .entry-footer {
-  background-color: #bbbbbb;
-  color: #777777;
-  font-size: 12.8px;
-  font-size: 0.8rem;
-  padding: 0.5rem;
-  text-align: right;
+    background-color: var(--gray-light)bbb;
+    color: var(--gray-medium)777;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    text-align: right;
 }
-.site .site-content article .entry-footer span {
-  display: block;
-}
+
 .site .site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
+    float: right;
+    overflow: hidden;
+    width: 25%;
 }
+
 .site .site-content .widget-area .search-field {
-  border-radius: 0;
-  font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    border-radius: 0;
+    display: block;
+    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
+
 .site .site-content .widget-area .search-submit {
-  background-color: #0088FF;
-  border: 1px #0088FF solid;
-  border-radius: 0;
-  color: #0000AA;
-  margin-top: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: var(--blue-primary);
+    border-radius: 0;
+    border: 1px var(--blue-primary) solid;
+    color: var(--blue-dark);
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
-.site .site-content .widget-area .search-submit:hover {
-  background-color: #0000AA;
-  color: #0088FF;
-}
+
 .site .site-content .widget-area .widget .widget-title {
-  background-color: #0088FF;
-  color: #0000AA;
-  margin-bottom: 0;
-  padding: 0.5em;
-  font-size: 14.4px;
-  font-size: 0.9rem;
+    background-color: var(--blue-primary);
+    color: var(--blue-dark);
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding: 0.5em;
 }
+
 .site .site-content .widget-area .widget ul {
-  background-color: #ffffff;
-  color: #777777;
-  font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  list-style: none;
-  margin: 0;
-  padding: 1rem;
-  font-size: 12.8px;
-  font-size: 0.8rem;
+    background-color: var(--gray-lighter);
+    color: var(--gray-medium)777;
+    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
 }
+
 .site .site-content .widget-area .widget ul li {
-  margin: 0.25rem 0;
+    margin: 0.25rem 0;
 }
+
 .site .site-content .widget-area .widget:nth-child(3) .widget-title {
-  background-color: #ff7777;
-  color: #880000;
+    background-color: var(--blue-primary);
+    color: var(--blue-dark);
 }
-.site .site-content .widget-area .widget:nth-child(4) .widget-title {
-  background-color: #aaff66;
-  color: #00cc55;
+
+.site .site-content .widget-area .widget:nth-child(4) .widget-title, .archive-development h3 {
+    background-color: var(--green-light);
+    color: var(--green-dark);
 }
+
 .site .site-content .widget-area .widget:nth-child(5) .widget-title {
-  background-color: #dd8855;
-  color: #664400;
+    background-color: var(--red-light);
+    color: var(--red-dark);
 }
+
 .site .site-content .widget-area .widget:nth-child(6) .widget-title {
-  background-color: #bbbbbb;
-  color: #333333;
+    background-color: var(--green-light);
+    color: var(--green-dark);
 }
+
 .site .site-content .widget-area .widget:nth-child(7) .widget-title {
-  background-color: #ffffff;
-  color: #000000;
+    background-color: var(--orange-light);
+    color: var(--orange-dark);
 }
+
 .site .site-footer {
-  clear: both;
-  color: #bbbbbb;
-  margin: 3em;
-  width: 100%;
-}
-.site .site-footer a, .site .site-footer a:visited {
-  color: #0000AA;
-  text-decoration: none;
-}
-.site .site-footer a:hover {
-  color: #0000AA;
-  text-decoration: underline;
+    clear: both;
+    color: var(--gray-light)bbb;
+    margin: 3em;
+    width: 100%;
 }
 
 .content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%;
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 100%;
 }
 
 .site-main {
-  margin: 0 25% 0 0;
+    margin: 0 25% 0 0;
 }
 
 .comments-area {
-  background-color: #ffffff;
-  margin-bottom: 2em;
-  margin-right: 3em;
-  padding-bottom: 1em;
+    background-color: var(--gray-lighter);
+    margin-bottom: 2em;
+    margin-right: 3em;
+    padding-bottom: 1em;
 }
+
 .comments-area .comments-title {
-  background-color: #0088FF;
-  color: #0000AA;
-  padding: 1rem;
-  font-size: 16px;
-  font-size: 1rem;
+    background-color: var(--blue-primary);
+    color: var(--blue-dark);
+    font-size: 1rem;
+    padding: 1rem;
 }
+
 .comments-area .comment-list, .comments-area .comment-respond {
-  background-color: #ffffff;
-  color: #777777;
-  font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  list-style: none;
-  margin: 0;
-  padding: 1rem 1rem 0;
-  font-size: 12.8px;
-  font-size: 0.8rem;
+    background-color: var(--gray-lighter);
+    color: var(--gray-medium)777;
+    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 1rem 0;
 }
-.comments-area .comment-list .logged-in-as a:nth-child(2), .comments-area .comment-respond .logged-in-as a:nth-child(2) {
-  display: block;
-}
+
 .comments-area .comment-list .submit, .comments-area .comment-respond .submit {
-  background-color: #0088FF;
-  border: 1px #0088FF solid;
-  border-radius: 0;
-  color: #0000AA;
-  margin-top: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.comments-area .comment-list .submit:hover, .comments-area .comment-respond .submit:hover {
-  background-color: #0000AA;
-  color: #0088FF;
+    background-color: var(--blue-primary);
+    border-radius: 0;
+    border: 1px var(--blue-primary) solid;
+    color: var(--blue-dark);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .page-title {
-  color: #0088FF;
-  font-size: 32px;
-  font-size: 2rem;
+    color: var(--blue-primary);
+    font-size: 32px;
 }
 
 .no-sidebar .content-area {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .no-sidebar .site-header {
-  padding-right: 2rem;
-  padding-left: 2rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
+
 .no-sidebar .site-main {
-  margin-right: 0;
+    margin-right: 0;
 }
 
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-  display: block;
-}
-
-.post,
-.page {
-  margin: 0 0 1.5em;
-}
-
-.updated:not(.published) {
-  display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
+.page-content, .entry-content, .entry-summary {
+    margin: 1.5em 0 0;
 }
 
 .page-links {
-  clear: both;
-  margin: 0 0 1.5em;
+    clear: both;
+    margin: 0 0 1.5em;
+    padding-bottom: 1rem;
 }
 
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
 .comment-content a {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
-.bypostauthor {
-  display: block;
+.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
+embed, iframe, object {
+    max-width: 100%;
 }
 
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
-
-/* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-  display: inline-block;
+    display: inline-block;
+    float: left;
+    margin: 0 1rem 0 -1rem;
+    width: 80px;
 }
 
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
 .wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%;
+    margin-bottom: 1.5em;
+    max-width: 100%;
 }
+
 .wp-caption img[class*=wp-image-] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+    margin: 0.8075em 0;
 }
 
-.wp-caption-text {
-  text-align: center;
-}
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em;
+.wp-caption-text, .social-links {
+    text-align: center;
 }
 
 .gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
 }
+
 .gallery-columns-2 .gallery-item {
-  max-width: 50%;
+    max-width: 50%;
 }
+
 .gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
+    max-width: 33.33%;
 }
+
 .gallery-columns-4 .gallery-item {
-  max-width: 25%;
+    max-width: 25%;
 }
+
 .gallery-columns-5 .gallery-item {
-  max-width: 20%;
+    max-width: 20%;
 }
+
 .gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
+    max-width: 16.66%;
 }
+
 .gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
+    max-width: 14.28%;
 }
+
 .gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
+    max-width: 12.5%;
 }
+
 .gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
+    max-width: 11.11%;
 }
 
-.gallery-caption {
-  display: block;
+.wp-block-list, .site .site-header .main-navigation .sub-menu li, table.has-fixed-layout {
+    margin: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+.wp-block-quote {
+    margin: 0 5%;
+    padding: 1% 2%;
+}
+
+.wp-block-quote p {
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+
+.wp-block-quote p::before, .wp-block-quote p::after {
+    content: "\"";
+}
+
+.wp-block-quote cite::before {
+    content: " - ";
+    margin-left: 1%;
+}
+
+ol.wp-block-footnotes {
+    color: var(--gray-dark);
+    font-size: 80%;
+    margin-left: 0;
+    padding-left: 5%;
+}
+
+.site-title {
+    clear: none;
+}
+
+.page-links a:last-child {
+    float: right;
+}
+
+.site .site-content .category-lets-play-baldurs-gate header, .site .site-content .post-4170 header, .parent-pageid-4170 .site .site-content header {
+    background-color: var(--orange-light);
+}
+
+.site .site-content .category-lets-play-baldurs-gate header a, .site .site-content .post-4170 header a, .parent-pageid-4170 .site .site-content header a, .site .site-content .category-lets-play-baldurs-gate header a:hover, .site .site-content .post-4170 header a:hover, .parent-pageid-4170 .site .site-content header a:hover, .site .site-content .category-lets-play-baldurs-gate header h1, .site .site-content .post-4170 header h1, .parent-pageid-4170 .site .site-content header h1 {
+    color: var(--orange-dark);
+}
+
+.widget_archive {
+    margin-bottom: 1em;
+}
+
+.archive-header, .nav-links {
+    margin-right: 3em;
+}
+
+.archive-columns h3 {
+    margin: 0;
+    padding: 0.1em 0.5em;
+}
+
+.archive-columns ul, .wp-block-archives-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.archive-columns li, .wp-block-archives-list li {
+    padding: 0.5em;
+}
+
+.archive-travel {
+    border: 1px solid var(--blue-primary);
+}
+
+.archive-travel h3 {
+    background-color: var(--blue-primary);
+    color: var(--blue-dark);
+}
+
+.archive-development {
+    border: 1px solid var(--green-light);
+}
+
+.archive-other {
+    border: 1px solid var(--gray-light);
+}
+
+.archive-other h3, .site .site-content .widget-area .widget:nth-child(8) .widget-title {
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+}
+
+.archive-video-games {
+    border: 1px solid var(--orange-light);
+}
+
+.archive-video-games h3 {
+    background-color: var(--orange-light);
+    color: var(--orange-dark);
+}
+
+.archive-writing {
+    border: 1px solid var(--red-light);
+}
+
+.archive-writing h3 {
+    background-color: var(--red-light);
+    color: var(--red-dark);
+}
+
+.wp-block-image img {
+    min-width: 100%;
+}
+
+.wp-block-image figcaption {
+    color: var(--gray-dark);
+    font-size: smaller;
+    margin: 0.25em;
+    text-align: center;
+}
+
+.wp-block-embed {
+    background: 0;
+    border: 0;
+    text-align: center;
+}
+
+.entry-header a:visited {
+    color: inherit;
+}
+
+.site .site-content .category-development header {
+    background-color: var(--gray-dark);
+}
+
+.site .site-content .category-development header a, .site .site-content .category-development header a:visited, .site .site-content .category-development header h1, .site .site-content .category-development header h2, .site .site-content .category-minecraft-modding header a:hover, .site .site-content .post-11708 header a:hover, .parent-pageid-11708 .site .site-content header a:hover, .parent-pageid-24958 .site .site-content header a:hover, .site .site-content .category-minecraft-mods header a:hover, .site .site-content .category-food header a, .site .site-content .category-cooking header a:visited, .site .site-content .category-food header h1, .site .site-content .category-food header h2 {
+    color: var(--gray-light);
+}
+
+.site .site-content .category-development header a:hover, .site .site-content .category-food header a:hover {
+    color: var(--gray-lighter);
+}
+
+.site .site-content .category-development  header .entry-meta, .site .site-content .category-lets-play-baldurs-gate header a:hover, .site .site-content .category-playing-my-steam-library header a:hover, .site .site-content .post-13188 header a:hover, .site .site-content .category-language header a:hover, .site .site-content .category-language  header .entry-meta, .related-posts li.category-language a:hover {
+    color: var(--gray-medium);
+}
+
+.site .site-content .category-productivity header, .site .site-content .category-web-development header, .site .site-content .category-minecraft-modding header, .site .site-content .post-11708 header, .parent-pageid-11708 .site .site-content header, .parent-pageid-24958 .site .site-content header {
+    background-color: var(--green-light);
+}
+
+.site .site-content .category-productivity header a, .site .site-content .category-productivity header a:visited, .site .site-content .category-productivity header a:hover, .site .site-content .category-productivity header h1, .site .site-content .category-productivity header h2, .site .site-content .category-web-development header a, .site .site-content .category-web-development header a:visited, .site .site-content .category-web-development header a:hover, .site .site-content .category-web-development header h1, .site .site-content .category-web-development header h2, .site .site-content .category-minecraft-modding header a, .site .site-content .post-11708 header a, .parent-pageid-11708 .site .site-content header a, .site .site-content .category-minecraft-modding header a:visited, .site .site-content .post-11708 header a:visited, .parent-pageid-11708 .site .site-content header a:visited, .parent-pageid-24958 .site .site-content header a, .parent-pageid-24958 .site .site-content header a:visited, .site .site-content .category-minecraft-modding header h1, .site .site-content .post-11708 header h1, .parent-pageid-11708 .site .site-content header h1, .parent-pageid-24958 .site .site-content header h1, .site .site-content .category-minecraft-modding header h2, .site .site-content .post-11708 header h2, .parent-pageid-11708 .site .site-content header h2, .parent-pageid-24958 .site .site-content header h2, .related-posts li.category-minecraft-modding a, .related-posts li.category-minecraft-modding a:visited {
+    color: var(--green-dark);
+}
+
+.site .site-content .category-video-games header, .site .site-content .category-lets-play-baldurs-gate header {
+    background-color: var(--orange-light);
+}
+
+.site .site-content .category-video-games header a, .site .site-content .category-video-games header a:visited, .site .site-content .category-video-games header a:hover, .site .site-content .category-video-games header h1, .site .site-content .category-video-games header h2, .site .site-content .category-lets-play-baldurs-gate header a, .site .site-content .category-lets-play-baldurs-gate header a:visited, .site .site-content .category-lets-play-baldurs-gate header h1, .site .site-content .category-lets-play-baldurs-gate header h2, .related-posts li.category-lets-play-baldurs-gate a, .related-posts li.category-lets-play-baldurs-gate a:visited {
+    color: var(--orange-dark);
+}
+
+.site .site-content .category-minecraft-mods header {
+    background-color: var(--green-dark);
+}
+
+.site .site-content .category-minecraft-mods header a, .site .site-content .category-minecraft-mods header a:visited, .site .site-content .category-minecraft-mods header h1, .site .site-content .category-minecraft-mods header h2, .related-posts li.category-minecraft-mods a, .related-posts li.category-minecraft-mods a:visited {
+    color: var(--green-light);
+}
+
+.site .site-content .category-playing-my-steam-library header, .site .site-content .post-13188 header, .site .site-content .category-other header, .site .site-content .category-announcement header, .site .site-content .category-cooking header, .site .site-content .category-film header {
+    background-color: var(--gray-light);
+}
+
+.site .site-content .category-playing-my-steam-library header a, .site .site-content .post-13188 header a, .site .site-content .category-playing-my-steam-library header a:visited, .site .site-content .post-13188 header a:visited, .site .site-content .category-playing-my-steam-library header h1, .site .site-content .post-13188 header h1, .site .site-content .category-playing-my-steam-library header h2, .site .site-content .post-13188 header h2, .site .site-content .category-travel header a:hover, .site .site-content .category-travel header a:hover, .site .site-content .category-writing header a:hover, .site .site-content .category-writing header a:hover, .site .site-content .category-media header a:hover, .site .site-content .category-other header a, .site .site-content .category-other header a:visited, .site .site-content .category-other header a:hover, .site .site-content .category-other header h1, .site .site-content .category-other header h2, .site .site-content .category-announcement header a, .site .site-content .category-announcement header a:visited, .site .site-content .category-announcement header a:hover, .site .site-content .category-announcement header h1, .site .site-content .category-announcement header h2, .site .site-content .category-cooking header a, .site .site-content .category-cooking header a:visited, .site .site-content .category-cooking header a:hover, .site .site-content .category-cooking header h1, .site .site-content .category-cooking header h2, .site .site-content .category-film header a, .site .site-content .category-film header a:visited, .site .site-content .category-film header a:hover, .site .site-content .category-film header h1, .site .site-content .category-film header h2, .related-posts a:hover, .related-posts li.category-media a:hover, .related-posts li.category-playing-my-steam-library a, .related-posts li.category-playing-my-steam-library a:visited {
+    color: var(--gray-dark);
+}
+
+.site .site-content .post-13173 header, .site .site-content .category-writing header, .site .site-content .category-media header {
+    background-color: var(--red-light);
+}
+
+.site .site-content .post-13173 header a, .site .site-content .post-13173 header a:hover, .site .site-content .post-13173 header a:visited, .site .site-content .post-13173 header h1, .site .site-content .post-13173 header h2, .site .site-content .category-writing header a, .site .site-content .category-writing header a:visited, .site .site-content .category-writing header h1, .site .site-content .category-writing header h2, .site .site-content .category-media header a, .site .site-content .category-book header a:visited, .site .site-content .category-media header h1, .site .site-content .category-book header h2, .related-posts li.category-media a, .related-posts li.category-media a:visited {
+    color: var(--red-dark);
+}
+
+.site .site-content .category-travel header {
+    background-color: var(--blue-primary);
+}
+
+.site .site-content .category-travel header a, .site .site-content .category-travel header a:visited, .site .site-content .category-travel header h1, .site .site-content .category-travel header h2, .related-posts a, .related-posts a:visited {
+    color: var(--blue-dark);
+}
+
+.site .site-content .category-language header {
+    background-color: var(--red-dark);
+}
+
+.site .site-content .category-language header a, .site .site-content .category-language header a:visited, .site .site-content .category-language header h1, .site .site-content .category-language header h2, .related-posts li.category-language a, .related-posts li.category-language a:visited {
+    color: var(--red-light);
+}
+
+.site .site-content .category-food header {
+    background-color: var(--gray-medium);
+}
+
+.wp-block-media-text {
+    padding-bottom: 1em;
+}
+
+.related-posts {
+    background: white;
+    margin: 0 3em 3em 0;
+    padding-bottom: 0.2em;
+}
+
+.related-posts h2 {
+    background: var(--blue-primary);
+    color: var(--blue-dark);
+    padding: 1em;
+    text-align: center;
+}
+
+.related-posts h3 {
+    margin: 1rem 0 0.5rem;
+    padding: 1rem 0 0 1rem;
+}
+
+.related-posts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.related-posts li {
+    background: var(--blue-primary);
+    color: var(--blue-dark);
+    margin: 1em;
+}
+
+.related-posts li.category-media {
+    background: var(--red-light);
+}
+
+.related-posts li.category-lets-play-baldurs-gate {
+    background: var(--orange-light);
+}
+
+.related-posts li.category-playing-my-steam-library, thead {
+    background: var(--gray-light);
+}
+
+.related-posts li.category-minecraft-modding {
+    background: var(--green-light);
+}
+
+.related-posts li.category-minecraft-mods {
+    background: var(--green-dark);
+}
+
+.related-posts li.category-language {
+    background: var(--red-dark);
+}
+
+.related-posts img {
+    display: block;
+    width: 100%;
+}
+
+.related-posts p {
+    color: var(--blue-dark);
+    margin: 0.5em 1em;
+    padding-top: 0.5em;
+}
+
+.nav-links a {
+    color: var(--blue-primary);
+}
+
+.social-links img {
+    margin: 1% 2%;
+    width: 10%;
+}
+
+.widget-area {
+    padding-top: 2em;
+}
+
+.archive-description p {
+    background: var(--blue-dark);
+    color: var(--blue-primary);
+    margin: 0;
+    padding: 1em 1em 0;
+}
+
+.menu-toggle {
+    background-color: var(--blue-dark);
+    border-radius: 0;
+    border: 0;
+    color: var(--blue-primary);
+    width: 100%;
+}
+
+.menu-toggle:hover {
+    background-color: var(--blue-primary);
+    color: var(--blue-dark);
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+.tagcloud {
+    background: var(--gray-light);
+    border: 1px solid var(--gray-dark);
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+input {
+    font-family: revert;
+}
+
+input[type=submit] {
+    background-color: var(--blue-primary);
+    border-radius: 0;
+    border: 1px var(--blue-primary) solid;
+    color: var(--blue-dark);
+    font-family: "C64", sans-serif;
+}
+
+.page header {
+    padding: 0 1em 1em;
+}
+
+article blockquote p::before {
+}
+
+article blockquote p::after {
+    content: close-quote;
+}
+
+article blockquote {
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    padding: 1rem;
+    quotes: "“" "”" "‘" "’";
+}
+
+.icon figure {
+    background: none;
+    border: none;
+}
+
+.wp-block-media-text.has-media-on-the-right > .wp-block-media-text__content {
+    padding-left: 0;
+}
+
+figure.wp-block-table {
+    background: var(--gray-lighter);
+}
+
+.progress-bar {
+    background: linear-gradient(to right,var(--green-dark) 1.82648401826%,var(--green-light) 6.16438356164%,var(--yellow-light) 13.9269406393%,var(--gray-light) 0%);
+    border: 1px solid var(--gray-dark);
+}
+
+@media screen and (min-width:37.5em) {
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: block;
+    }
+}
+
+@media screen and (max-width:45em) {
+    body {
+        background: var(--blue-primary);
+    }
+    .site {
+        margin: 5%;
+    }
+    .site .site-header {
+        font-size: 0.6em;
+    }
+    .site .site-content .widget-area, .site .site-content article .entry-footer, .menu-item-home, .enlighter-t-enlighter.enlighter-linenumbers div.enlighter div:before {
+        display: none;
+    }
+    .site .site-content {
+        padding: 0 1em;
+    }
+    .site-main, .site .site-content article, .related-posts, .nav-links {
+        font-size: 0.8em;
+        margin: 0;
+    }
+    .site .site-footer {
+        font-size: 0.7em;
+        margin: 1em;
+    }
+    .content-area {
+        margin-bottom: 1em;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    .comments-area {
+        margin: 1em 0;
+    }
+    .comments-area .comment-respond, div.enlighter div {
+        font-size: 0.8em;
+    }
+    .logged-in-as a {
+        display: block;
+    }
+    .comments-area .comment-respond input {
+        max-width: 100%;
+    }
+    code {
+        font-size: 1em;
+    }
+}
