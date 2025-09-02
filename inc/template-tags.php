@@ -11,7 +11,7 @@ if ( ! function_exists( 'bokmcdok_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function bokmcdok_posted_on() {
+	function bokmcdok_posted_on(): void {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -39,7 +39,7 @@ if ( ! function_exists( 'bokmcdok_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function bokmcdok_posted_by() {
+	function bokmcdok_posted_by(): void {
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'bokmcdok' ),
@@ -55,21 +55,28 @@ if ( ! function_exists( 'bokmcdok_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function bokmcdok_entry_footer() {
+	function bokmcdok_entry_footer(): void {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'bokmcdok' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bokmcdok' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+                printf(
+                        '<span class="cat-links">%1$s %2$s</span>',
+                        esc_html__( 'Posted in', 'bokmcdok' ),
+                        $categories_list
+                );
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'bokmcdok' ) );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bokmcdok' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                printf(
+                        '<span class="tags-links">%1$s %2$s</span>',
+                        esc_html__( 'Posted in', 'bokmcdok' ),
+                        $tags_list
+                );
 			}
 		}
 
@@ -118,7 +125,7 @@ if ( ! function_exists( 'bokmcdok_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function bokmcdok_post_thumbnail() {
+	function bokmcdok_post_thumbnail(): void {
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
@@ -151,7 +158,7 @@ if ( ! function_exists( 'bokmcdok_post_thumbnail' ) ) :
 				) );
 			} else {
 				?>
-				<img src="https://www.bokmcdok.com/wp-content/uploads/2023/07/2023-01-14-jpg.webp" />
+				<img src="https://www.bokmcdok.com/wp-content/uploads/2023/07/2023-01-14-jpg.webp"  alt="Shanghai Skyline"/>
 			    <?php
 			}
 				

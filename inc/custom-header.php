@@ -16,7 +16,7 @@
  *
  * @uses bokmcdok_header_style()
  */
-function bokmcdok_custom_header_setup() {
+function bokmcdok_custom_header_setup(): void {
 	add_theme_support( 'custom-header', apply_filters( 'bokmcdok_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
@@ -34,7 +34,7 @@ if ( ! function_exists( 'bokmcdok_header_style' ) ) :
 	 *
 	 * @see bokmcdok_custom_header_setup().
 	 */
-	function bokmcdok_header_style() {
+	function bokmcdok_header_style(): void {
 		$header_text_color = get_header_textcolor();
 
 		/*

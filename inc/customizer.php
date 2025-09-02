@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function bokmcdok_customize_register( $wp_customize ) {
+function bokmcdok_customize_register( WP_Customize_Manager $wp_customize ): void {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -33,7 +33,7 @@ add_action( 'customize_register', 'bokmcdok_customize_register' );
  *
  * @return void
  */
-function bokmcdok_customize_partial_blogname() {
+function bokmcdok_customize_partial_blogname(): void {
 	bloginfo( 'name' );
 }
 
@@ -42,14 +42,14 @@ function bokmcdok_customize_partial_blogname() {
  *
  * @return void
  */
-function bokmcdok_customize_partial_blogdescription() {
+function bokmcdok_customize_partial_blogdescription(): void {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function bokmcdok_customize_preview_js() {
+function bokmcdok_customize_preview_js(): void {
 	wp_enqueue_script( 'bokmcdok-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'bokmcdok_customize_preview_js' );
