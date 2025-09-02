@@ -15,7 +15,7 @@ if ( ! function_exists( 'bokmcdok_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function bokmcdok_setup() {
+	function bokmcdok_setup(): void {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -90,7 +90,7 @@ add_action( 'after_setup_theme', 'bokmcdok_setup' );
  *
  * @global int $content_width
  */
-function bokmcdok_content_width() {
+function bokmcdok_content_width(): void {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
@@ -103,7 +103,7 @@ add_action( 'after_setup_theme', 'bokmcdok_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function bokmcdok_widgets_init() {
+function bokmcdok_widgets_init(): void {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'bokmcdok' ),
 		'id'            => 'sidebar-1',
@@ -119,7 +119,7 @@ add_action( 'widgets_init', 'bokmcdok_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function bokmcdok_scripts() {
+function bokmcdok_scripts(): void {
 	wp_enqueue_style( 'bokmcdok-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'bokmcdok-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -192,7 +192,7 @@ function close_tags($html) {
     return $output;
 }
 
-function improved_trim_excerpt($text) {
+function improved_trim_excerpt($text): string {
 	
 	// Get the full content if no manual excerpt provided.
     if ( '' === $text ) {
@@ -262,9 +262,7 @@ function improved_trim_excerpt($text) {
 	$text = close_tags($text);
 	
 	// Add a read more link.
-	$text = $text.'<p><a href="' . esc_url(get_permalink()) . '">Read More...</a></p>';
-
-	return $text;
+    return $text . '<p><a href="' . esc_url(get_permalink()) . '">Read More...</a></p>';
 }
 
 //  Replace default excerpt filter with our custom filter.
@@ -272,7 +270,7 @@ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
 
 /*
- * Gets rid of the achive prefix from the titles.
+ * Gets rid of the archive prefix from the titles.
  */
 
 function db_archive_title( $title ) {
@@ -320,11 +318,17 @@ add_action('template_redirect', function() {
 		if (!empty($posts)) {
 			wp_redirect(get_permalink($posts[0]), 307);
 		} else {
-			wp_redirect(home_url(), 302); // fallback if no posts
+			wp_redirect(home_url()); // fallback if no posts
 		}
 		exit;
 	}
 });
+
+// Ensure /random works after theme activation
+function bokmcdok_flush_rewrite_rules(): void {
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'bokmcdok_flush_rewrite_rules' );
 
 /**
  * Random quote shortcode
@@ -346,7 +350,7 @@ function random_quote() {
 				'If you always put limits on everything you do, physical or anything else, it will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.',
 				'I\'m a Traveller born and bred,<br />On the road until I\'m dead<br />If that means I\'ll be alone<br />Then loneliness shall be my home',
 				'Venture Adventure.',
-				'You have the privelege of believing what\'s best in people. Me, I happen to know there are some things in this world that don\'t deserve forgiveness.',
+				'You have the privilege of believing what\'s best in people. Me, I happen to know there are some things in this world that don\'t deserve forgiveness.',
 				'I always wondered what kind of person could do such a thing, but now that I see you, I think I understand. There\'s just *nothing* inside you, nothing at all. You\'re pathetic and sad and empty.',
 				'As I was going up the stairs<br />I met a man that wasn\'t there<br />He wasn\'t there again today<br />I wish, I wish he\'d go away',
 				'Inaction is a weapon of mass destruction.',
@@ -355,10 +359,10 @@ function random_quote() {
 				'A thing isn\'t beautiful because it lasts',
 				'Roses come in a variety of colors<br />And violets are violet, not blue<br />I\'m trying to write a romantic poem<br />Because I really want to fuck you',
 				'F*** society',
-				'As I flutter in the breeze<br />I think of what my mind\'s eye sees<br />At night when I\'m an old wiseman<br />Contemplating the things I can.<br />Am I the one that dreams of he,<br />Or is he the one that dreams of me?',
+				'As I flutter in the breeze<br />I think of what my mind\'s eye sees<br />At night when I\'m an old wise-man<br />Contemplating the things I can.<br />Am I the one that dreams of he,<br />Or is he the one that dreams of me?',
 				'<b>An Irish Poem</b><br />Pome<br /> - <i>Bok McDok</i>',
 				'It\'s okay if the first step in saving the world is saving one person. It\'s okay if that person is you.',
-				'Use your privelege to protect those who don\'t have the same protections as you.',
+				'Use your privilege to protect those who don\'t have the same protections as you.',
 				'Do more than just exist.',
 				'You shall treat the alien who resides with you no differently than the natives born among you; you shall love the alien as yourself; for you too were once aliens in the land of Egypt. I, the LORD, am your God.<br />- <i>Leviticus 19:34</i>',
 				'Love is not control. Love is not giving up everything for someone to keep them happy so they won\'t abuse you. It\'s never your fault. Don\'t start believing your abuser(s). You deserve better.',
@@ -369,7 +373,7 @@ function random_quote() {
 				'The engine room is heavy, and the idle man is free from it.',
 				'Whenever you\'re feeling lost it\'s best to find where you\'re needed most',
 				'I did it, Grandma. I finally stood up for myself. I got real mean and I beat the shnot outta Dr. Oz. I can\'t lie, it felt kind of good. At first. But since then all I have is just... a kind of dark, empty feeling. Then I realized... that\'s how you must feel. All the time. Poor old Grandma. You know, I\'ve been getting lots of advice how to deal with you. Stand up to you, tell on you... But I kind of realize there\'s just people like you out there. All over the place. When you\'re a kid, things seem like they\'re gonna last forever. But they\'re not. Life changes. Why you won\'t always be around. Someday you\'re gonna die. Someday pretty soon. And when you\'re laying in that hospital bed, with tubes up your nose, and that little pan under your butt to pee in, well I\'ll come visit ya. I\'ll come just to show you that I\'m still alive and I\'m still happy. And you\'ll die. Being nothing but you. \'Night Grandma!',
-				'Individual science fiction stories may seem as trivial as ever to the blinder critics and philosophers of today, but the core of science fiction -- its essence -- has become crucial to our salvbation, if we are to be saved at all.',
+				'Individual science fiction stories may seem as trivial as ever to the blinder critics and philosophers of today, but the core of science fiction -- its essence -- has become crucial to our salvation, if we are to be saved at all.',
 				'If anything, if anything at all is to come from this trial and from my statement on behalf of those I love, let it be that the world takes notice of the evil that can happen when people do nothing. And let it be that the world decides that doing nothing is not an option.',
 				'Love yourself like your life depends on it.',
 				'Never give up – keep going',
@@ -384,7 +388,7 @@ function random_quote() {
 	return apply_filters('bok_random_quote', $quote);
 }
 
-function random_quote_shortcode() {
+function random_quote_shortcode(): string {
 	return '<section id="block-random" class="widget widget_block">
 		<blockquote class="wp-block-quote has-text-color has-small-font-size" style="color:#0088ff">
 			<p>' . wp_kses_post(random_quote()) . '</p>
@@ -399,7 +403,7 @@ add_shortcode('random_quote', 'random_quote_shortcode');
  */
 
 // Generate a single download list item.
-function generate_bok_butterfly_release_link($mod_version, $mod_loader, $minecraft_version) {
+function generate_bok_butterfly_release_link($mod_version, $mod_loader, $minecraft_version): string {
 	$url = sprintf(
 		'https://github.com/doc-bok/Butterflies/releases/download/v%s-for-%s/butterflies-%s.jar',
 		esc_attr($mod_version),
@@ -413,12 +417,12 @@ function generate_bok_butterfly_release_link($mod_version, $mod_loader, $minecra
 }
 
 // Shortcode handler to render the full list.
-function generate_bok_butterfly_release_links($atts) {
-	$atts = shortcode_atts([
+function generate_bok_butterfly_release_links($attributes): string {
+	$attributes = shortcode_atts([
 		'version' => '6.0.0',
-	], $atts, 'bok_butterfly_release_links');
+	], $attributes, 'bok_butterfly_release_links');
 
-	$version = $atts['version'];
+	$version = $attributes['version'];
 
 	$releases = [
 		['loader' => 'NeoForge', 'mc' => '1.21.4'],
@@ -444,66 +448,13 @@ add_shortcode('bok_butterfly_release_links', 'generate_bok_butterfly_release_lin
 /**
  * Add colors to dialogue in Baldur's Gate posts.
  */
-function bok_add_dialogue_colours() {
-    ?>
-    <script>
-        (function() {
-            document.addEventListener('DOMContentLoaded', () => {
-                const colorPalette = [
-                    "#333",     // 0: Dark Grey (default)
-                    "#800",     // 1: Red
-                    "#808080",  // 2: Grey
-                    "#777",     // 3: Medium Grey
-                    "#4fb300",  // 4: Light Green
-                    "#000",     // 5: Black
-                    "#7f401a",  // 6: Orange
-                    "#0C5",     // 7: Green
-                    "#640",     // 8: Brown
-                    "#9f9f14",  // 9: Yellow
-                    "#6b1d6b",  // 10: Purple
-                    "#bb0000",  // 11: Light Red
-                    "#5d5d5d",  // 12: Light Grey
-                    "#00A",     // 13: Blue
-                    "#08F",     // 14: Light Blue
-                    "#00d4aa"   // 15: Cyan
-                ];
-
-                const paletteLength = colorPalette.length;
-
-                // Simple but effective hash function
-                const generateHash = (str) => {
-                    let hash = 0;
-                    // Trim string for consistent hashing
-                    const text = str.trim();
-
-                    for (const char of text) {
-                        hash = ((hash << 5) - hash) + char.charCodeAt(0);
-                        hash |= 0; // Convert to 32-bit integer
-                    }
-                    return hash;
-                };
-
-                // Apply to all <strong> elements
-                document.querySelectorAll('strong').forEach(el => {
-                    const textContent = el.textContent.trim();
-
-                    // Only apply to text that contains colon, indicative of dialogue "Speaker: line"
-                    if (!textContent.includes(':')) return;
-
-                    // Skip if the element already has a custom 'data-dialogue-colour' attribute to prevent recoloring
-                    if (el.hasAttribute('data-dialogue-colour')) return;
-
-                    const hash = generateHash(textContent);
-                    const colorIndex = Math.abs(hash % paletteLength);
-                    const color = colorPalette[colorIndex];
-
-                    el.style.color = color;
-                    el.setAttribute('data-dialogue-colour', color);  // mark processed
-                });
-            });
-        })();
-    </script>
-    <?php
+function bokmcdok_custom_scripts(): void {
+    wp_enqueue_script(
+            'bok-dialogue-colours',
+            get_template_directory_uri() . '/js/dialogue-colors.js',
+            array(), // dependencies
+            '1.0.0',
+            true // load in the footer
+    );
 }
-
-add_action('wp_footer', 'bok_add_dialogue_colours');
+add_action( 'wp_enqueue_scripts', 'bokmcdok_custom_scripts' );
