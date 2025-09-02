@@ -1,1245 +1,1189 @@
 :root {
-    /* Color Palette */
-    --blue-primary: #08F;
-    --blue-dark: #00a;
-    --gray-light: #bbb;
-    --gray-lighter: #eee;
-    --gray-dark: #333;
-    --gray-medium: #777;
-    --gray-medium-dark: #6b717f;
-    --green-light: #af6;
-    --green-dark: #0c5;
-    --yellow-light: #ee7;
-    --yellow-highlight: #fff9c0;
-    --red-light: #f77;
-    --red-dark: #800;
-    --orange-light: #d85;
-    --orange-dark: #640;
+    --blue-primary:#08F;
+    --blue-dark:#00a;
+    --gray-light:#bbb;
+    --gray-lighter:#eee;
+    --gray-dark:#333;
+    --gray-medium:#777;
+    --gray-medium-dark:#6b717f;
+    --green-light:#af6;
+    --green-dark:#0c5;
+    --yellow-light:#ee7;
+    --yellow-highlight:#fff9c0;
+    --red-light:#f77;
+    --red-dark:#800;
+    --orange-light:#d85;
+    --orange-dark:#640
 }
 
 html {
-    -webkit-text-size-adjust: 100%;
-    line-height: 1.15;
-    box-sizing: border-box;
+    -webkit-text-size-adjust:100%;
+    line-height:1.15;
+    box-sizing:border-box
 }
 
 body {
-    margin: 0;
-    background: var(--blue-primary);
-    min-width: 0;
+    margin:0;
+    background:var(--blue-primary);
+    min-width:0
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size:2em;
+    margin:.67em 0
 }
 
 hr {
-    box-sizing: content-box;
-    height: 1px;
-    overflow: visible;
-    background-color: var(--gray-light);
-    border: 0;
-    margin-bottom: 1.5em;
+    box-sizing:content-box;
+    height:1px;
+    overflow:visible;
+    background-color:var(--gray-light);
+    border:0;
+    margin-bottom:1.5em
 }
 
 pre {
-    font-family: "Courier 10 Pitch",Courier,monospace;
-    font-size: 15px;
-    background: var(--gray-lighter);
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1.6em;
+    font-family:"Courier 10 Pitch",Courier,monospace;
+    font-size:15px;
+    background:var(--gray-lighter);
+    line-height:1.6;
+    margin-bottom:1.6em;
+    max-width:100%;
+    overflow:auto;
+    padding:1.6em
 }
 
 a {
-    background-color: transparent;
-    color: var(--blue-dark);
+    background-color:transparent;
+    color:var(--blue-dark)
 }
 
 abbr[title] {
-    border-bottom: none;
-    text-decoration: underline dotted;
+    border-bottom:none;
+    text-decoration:underline dotted
 }
 
-b, strong {
-    font-weight: bolder;
+b,strong {
+    font-weight:bolder
 }
 
-code, kbd, samp {
-    font-family: monospace,monospace;
-    font-size: 1em;
+code,kbd,samp {
+    font-family:monospace,monospace;
+    font-size:1em
 }
 
 small {
-    font-size: 80%;
+    font-size:80%
 }
 
-sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+sub,sup {
+    font-size:75%;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline
 }
 
 sub {
-    bottom: -0.25em;
+    bottom:-.25em
 }
 
 sup {
-    top: -0.5em;
+    top:-.5em
 }
 
 img {
-    border-style: none;
-    height: auto;
-    max-width: 100%;
+    border-style:none;
+    height:auto;
+    max-width:100%
 }
 
-button, input, optgroup, select, textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
+button,input,optgroup,select,textarea {
+    font-family:inherit;
+    font-size:100%;
+    line-height:1.15;
+    margin:0
 }
 
-button, input {
-    overflow: visible;
+button,input {
+    overflow:visible
 }
 
-button, select {
-    text-transform: none;
+button,select {
+    text-transform:none
 }
 
-button, [type=button], [type=reset], [type=submit] {
-    -webkit-appearance: button;
+button,[type=button],[type=reset],[type=submit] {
+    -webkit-appearance:button
 }
 
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner {
+    border-style:none;
+    padding:0
 }
 
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring {
+    outline:1px dotted ButtonText
 }
 
 fieldset {
-    padding: 0.35em 0.75em 0.625em;
+    padding:.35em .75em .625em
 }
 
 legend {
-    box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
+    box-sizing:border-box;
+    color:inherit;
+    display:table;
+    max-width:100%;
+    padding:0;
+    white-space:normal
 }
 
 progress {
-    vertical-align: baseline;
+    vertical-align:baseline
 }
 
 textarea {
-    overflow: auto;
-    width: 100%;
+    overflow:auto;
+    width:100%
 }
 
-[type=checkbox], [type=radio] {
-    box-sizing: border-box;
-    padding: 0;
+[type=checkbox],[type=radio] {
+    box-sizing:border-box;
+    padding:0
 }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-    height: auto;
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+    height:auto
 }
 
 [type=search] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
+    -webkit-appearance:textfield;
+    outline-offset:-2px
 }
 
 [type=search]::-webkit-search-decoration {
-    -webkit-appearance: none;
+    -webkit-appearance:none
 }
 
 ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
+    -webkit-appearance:button;
+    font:inherit
 }
 
-details, .menu-toggle, .main-navigation.toggled ul, .site .site-content article .entry-footer span, .comments-area .comment-list .logged-in-as a:nth-child(2), .comments-area .comment-respond .logged-in-as a:nth-child(2), .sticky, .bypostauthor, .infinity-end.neverending .site-footer, .gallery-caption, .logged-in-as a.customize-unpreviewable {
-    display: block;
+details,.menu-toggle,.main-navigation.toggled ul,.site .site-content article .entry-footer span,.comments-area .comment-list .logged-in-as a:nth-child(2),.comments-area .comment-respond .logged-in-as a:nth-child(2),.sticky,.bypostauthor,.infinity-end.neverending .site-footer,.gallery-caption,.logged-in-as a.customize-unpreviewable {
+    display:block
 }
 
 summary {
-    display: list-item;
+    display:list-item
 }
 
-template, [hidden], .updated:not(.published), .infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer, .akismet_comment_form_privacy_notice, .children .page_item {
-    display: none;
+template,[hidden],.updated:not(.published),.infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer,.akismet_comment_form_privacy_notice,.children .page_item {
+    display:none
 }
 
 @font-face {
-    font-display: swap;
-    font-family: "C64";
-    src: url("fonts/Commodore-64-v6.3.TTF") format("truetype");
+    font-display:swap;
+    font-family:"C64";
+    src:url(fonts/Commodore-64-v6.3.TTF) format("truetype")
 }
 
-body, button, input, select, optgroup, textarea {
-    color: var(--gray-medium-dark);
-    font-family: "C64","Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1rem;
-    line-height: 1.5;
-    text-rendering: optimizeLegibility;
+body,button,input,select,optgroup,textarea {
+    color:var(--gray-medium-dark);
+    font-family:"C64","Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:1rem;
+    line-height:1.5;
+    text-rendering:optimizeLegibility
 }
 
-h1, h2, h3, h4, h5, h6, .clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
-    clear: both;
+h1,h2,h3,h4,h5,h6,.clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after {
+    clear:both
 }
 
-p, .gallery {
-    margin-bottom: 1.5em;
+p,.gallery {
+    margin-bottom:1.5em
 }
 
-dfn, cite, em, i {
-    font-style: italic;
+dfn,cite,em,i {
+    font-style:italic
 }
 
 blockquote {
-    margin: 0 1.5em;
+    margin:0 1.5em
 }
 
-address, .post, .page {
-    margin: 0 0 1.5em;
+address,.post,.page {
+    margin:0 0 1.5em
 }
 
-code, kbd, tt, var {
-    font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
-    font-size: 15px;
+code,kbd,tt,var {
+    font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+    font-size:15px
 }
 
-abbr, acronym {
-    border-bottom: 1px dotted var(--gray-medium);
-    cursor: help;
+abbr,acronym {
+    border-bottom:1px dotted var(--gray-medium);
+    cursor:help
 }
 
-mark, ins {
-    background: var(--yellow-highlight);
-    text-decoration: none;
+mark,ins {
+    background:var(--yellow-highlight);
+    text-decoration:none
 }
 
 big {
-    font-size: 125%;
+    font-size:125%
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,:before,:after {
+    box-sizing:inherit
 }
 
-ul, ol {
-    margin: 0 0 1.5em 3em;
+ul,ol {
+    margin:0 0 1.5em 3em
 }
 
 ul {
-    list-style: disc;
+    list-style:disc
 }
 
 ol {
-    list-style: decimal;
+    list-style:decimal
 }
 
-li > ul, li > ol {
-    margin-bottom: 0;
-    margin-left: 1.5em;
+li > ul,li > ol {
+    margin-bottom:0;
+    margin-left:1.5em
 }
 
 dt {
-    font-weight: bold;
+    font-weight:700
 }
 
 dd {
-    margin: 0 1.5em 1.5em;
+    margin:0 1.5em 1.5em
 }
 
 figure {
-    margin: 1em 0;
-    background: var(--gray-light);
-    border-radius: 3px;
-    border: 1px var(--gray-dark) solid;
+    margin:1em 0;
+    background:var(--gray-light);
+    border-radius:3px;
+    border:1px var(--gray-dark) solid
 }
 
 table {
-    margin: 0 0 1.5em;
-    width: 100%;
+    margin:0 0 1.5em;
+    width:100%
 }
 
-button, input[type=button], input[type=reset], input[type=submit] {
-    background: var(--gray-lighter);
-    border-color: var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
-    border-radius: 3px;
-    border: 1px solid;
-    color: rgba(0,0,0,0.8);
-    font-size: 12px;
-    line-height: 1;
-    padding: 0.6em 1em 0.4em;
+button,input[type=button],input[type=reset],input[type=submit] {
+    background:var(--gray-lighter);
+    border-color:var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
+    border-radius:3px;
+    border:1px solid;
+    color:#000c;
+    font-size:12px;
+    line-height:1;
+    padding:.6em 1em .4em
 }
 
-button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
-    border-color: var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
-}
-
-button:active, button:focus, input[type=button]:active, input[type=button]:focus, input[type=reset]:active, input[type=reset]:focus, input[type=submit]:active, input[type=submit]:focus {
-    border-color: var(--gray-medium-dark) var(--gray-light) var(--gray-lighter);
-}
-
-input[type=text], input[type=email], input[type=url], input[type=password], input[type=search], input[type=number], input[type=tel], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], textarea {
-    border-radius: 3px;
-    border: 1px solid var(--gray-light);
-    color: var(--gray-medium);
-    padding: 3px;
-}
-
-input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=search]:focus, input[type=number]:focus, input[type=tel]:focus, input[type=range]:focus, input[type=date]:focus, input[type=month]:focus, input[type=week]:focus, input[type=time]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=color]:focus, textarea:focus {
-    color: var(--gray-dark);
-}
-
-select {
-    border: 1px solid var(--gray-light);
-}
-
-a:visited {
-    color: var(--gray-medium);
-}
-
-a:hover, a:focus, a:active {
-    color: var(--blue-primary);
+input[type=text],input[type=email],input[type=url],input[type=password],input[type=search],input[type=number],input[type=tel],input[type=range],input[type=date],input[type=month],input[type=week],input[type=time],input[type=datetime],input[type=datetime-local],input[type=color],textarea {
+    border-radius:3px;
+    border:1px solid var(--gray-light);
+    color:var(--gray-medium);
+    padding:3px
 }
 
 a:focus {
-    outline: thin dotted;
+    outline:thin dotted
 }
 
-a:hover, a:active, #content[tabindex="-1"]:focus {
-    outline: 0;
+a:hover,a:active,#content[tabindex="-1"]:focus {
+    outline:0
 }
 
 .main-navigation {
-    clear: both;
-    display: block;
-    float: left;
-    width: 100%;
+    clear:both;
+    display:block;
+    float:left;
+    width:100%
 }
 
 .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+    display:none;
+    list-style:none;
+    margin:0;
+    padding-left:0
 }
 
 .main-navigation ul ul {
-    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-    float: left;
-    left: -999em;
-    position: absolute;
-    top: 100%;
-    z-index: 99999;
+    box-shadow:0 3px 3px #0003;
+    float:left;
+    left:-999em;
+    position:absolute;
+    top:100%;
+    z-index:99999
 }
 
 .main-navigation ul ul ul {
-    left: -999em;
-    top: 0;
+    left:-999em;
+    top:0
 }
 
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-    left: 100%;
+.main-navigation ul ul li:hover > ul,.main-navigation ul ul li.focus > ul {
+    left:100%
 }
 
 .main-navigation ul ul a {
-    width: 200px;
+    width:200px
 }
 
-.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
-    left: auto;
+.main-navigation ul li:hover > ul,.main-navigation ul li.focus > ul {
+    left:auto
 }
 
 .main-navigation li {
-    float: left;
-    position: relative;
+    float:left;
+    position:relative
 }
 
 .main-navigation a {
-    display: block;
-    text-decoration: none;
+    display:block;
+    text-decoration:none
 }
 
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
-    margin: 0 0 1.5em;
-    overflow: hidden;
+.site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation {
+    margin:0 0 1.5em;
+    overflow:hidden
 }
 
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
-    float: left;
-    width: 50%;
+.comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous {
+    float:left;
+    width:50%
 }
 
-.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
+.comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next {
+    float:right;
+    text-align:right;
+    width:50%
 }
 
 .screen-reader-text {
-    border: 0;
-    clip-path: inset(50%);
-    clip: rect(1px,1px,1px,1px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute !important;
-    width: 1px;
-    word-wrap: normal !important;
+    border:0;
+    clip-path:inset(50%);
+    clip:rect(1px,1px,1px,1px);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute!important;
+    width:1px;
+    word-wrap:normal!important
 }
 
 .screen-reader-text:focus {
-    background-color: var(--gray-lighter);
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
-    clip-path: none;
-    clip: auto !important;
-    color: var(--green-dark);
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000;
+    background-color:var(--gray-lighter);
+    border-radius:3px;
+    box-shadow:0 0 2px 2px #0009;
+    clip-path:none;
+    clip:auto!important;
+    color:var(--green-dark);
+    display:block;
+    font-size:14px;
+    font-weight:700;
+    height:auto;
+    left:5px;
+    line-height:normal;
+    padding:15px 23px 14px;
+    text-decoration:none;
+    top:5px;
+    width:auto;
+    z-index:100000
 }
 
 .alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
+    display:inline;
+    float:left;
+    margin-right:1.5em
 }
 
 .alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
+    display:inline;
+    float:right;
+    margin-left:1.5em
 }
 
 .aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    clear:both;
+    display:block;
+    margin-left:auto;
+    margin-right:auto
 }
 
-.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-}
-
-.widget {
-    margin: 0;
+.clear:before,.clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after {
+    content:"";
+    display:table;
+    table-layout:fixed
 }
 
 .widget select {
-    max-width: 100%;
-    font-family: revert;
+    max-width:100%;
+    font-family:revert
 }
 
 .site {
-    background-color: var(--blue-primary);
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2rem;
-    min-width: 0;
+    background-color:var(--blue-primary);
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:2rem;
+    min-width:0
 }
 
 .site .site-header {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:1em;
+    padding-left:2em;
+    padding-right:2em
 }
 
 .site .site-header .site-branding .custom-logo-link {
-    float: left;
-    margin: 0 1rem 0 -1rem;
-    width: 80px;
+    float:left;
+    margin:0 1rem 0 -1rem;
+    width:80px
 }
 
 .site .site-header .site-branding .site-title {
-    clear: none;
-    margin: 0;
+    clear:none;
+    margin:0
 }
 
-.site .site-header .site-branding .site-title a, .site .site-header .site-branding .site-title a:visited, .site .site-header .site-branding .site-title a:hover, .site .site-content article header a, .site .site-content article header a:visited, .archive-header a, .archive-header a:visited, .site .site-footer a, .site .site-footer a:visited {
-    color: var(--blue-dark);
-    text-decoration: none;
+.site .site-header .site-branding .site-title a,.site .site-header .site-branding .site-title a:visited,.site .site-header .site-branding .site-title a:hover,.site .site-content article header a,.site .site-content article header a:visited,.archive-header a,.archive-header a:visited,.site .site-footer a,.site .site-footer a:visited {
+    color:var(--blue-dark);
+    text-decoration:none
 }
 
 .site .site-header .site-branding .site-description {
-    color: var(--gray-dark);
-    margin: 0;
+    color:var(--gray-dark);
+    margin:0
 }
 
 .site .site-header .main-navigation li {
-    margin-right: 0.25rem;
-    padding: 0.5rem;
+    margin-right:.25rem;
+    padding:.5rem
 }
 
-.site .site-header .main-navigation li, .site .site-header .main-navigation a, .site .site-header .main-navigation a:visited, .site .site-content .widget-area .search-submit:hover, .comments-area .comment-list .submit:hover, .comments-area .comment-respond .submit:hover {
-    background-color: var(--blue-dark);
-    color: var(--blue-primary);
-}
-
-.site .site-header .main-navigation a:hover {
-    background-color: var(--blue-primary);
-    color: var(--blue-dark);
+.site .site-header .main-navigation li,.site .site-header .main-navigation a,.site .site-header .main-navigation a:visited,.site .site-content .widget-area .search-submit:hover,.comments-area .comment-list .submit:hover,.comments-area .comment-respond .submit:hover {
+    background-color:var(--blue-dark);
+    color:var(--blue-primary)
 }
 
 .site .site-content {
-    background-color: var(--blue-dark);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-top: 2em;
+    background-color:var(--blue-dark);
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:3em;
+    padding-right:3em;
+    padding-top:2em
 }
 
 .site .site-content article {
-    background-color: var(--gray-lighter);
-    margin-right: 3em;
+    background-color:var(--gray-lighter);
+    margin-right:3em
 }
 
-.site .site-content article header, .archive-header {
-    background-color: var(--blue-primary);
+.site .site-content article header a:hover,.archive-header a:hover,.site .site-footer a:hover {
+    color:var(--blue-dark);
+    text-decoration:underline
 }
 
-.site .site-content article header a:hover, .archive-header a:hover, .site .site-footer a:hover {
-    color: var(--blue-dark);
-    text-decoration: underline;
+.site .site-content article header h1,.site .site-content article header h2,.archive-header h1,.archive-header h2 {
+    color:var(--blue-dark);
+    margin-bottom:0;
+    padding-left:1rem;
+    padding-top:1rem
 }
 
-.site .site-content article header h1, .site .site-content article header h2, .archive-header h1, .archive-header h2 {
-    color: var(--blue-dark);
-    margin-bottom: 0;
-    padding-left: 1rem;
-    padding-top: 1rem;
-}
-
-.site .site-content article header .entry-meta, .archive-header .entry-meta {
-    color: var(--gray-dark);
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+.site .site-content article header .entry-meta,.archive-header .entry-meta {
+    color:var(--gray-dark);
+    padding-bottom:1rem;
+    padding-left:1rem
 }
 
 .site .site-content article .post-thumbnail {
-    max-height: 250px;
-    overflow: hidden;
+    max-height:250px;
+    overflow:hidden
 }
 
 .site .site-content article .post-thumbnail img {
-    width: 100%;
+    width:100%
 }
 
-.site .site-content article .entry-summary, .site .site-content article .entry-content, .site .site-content article .entry-footer {
-    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    margin: 0;
-    padding: 0 1rem;
+.site .site-content article .entry-summary,.site .site-content article .entry-content,.site .site-content article .entry-footer {
+    font-family:"Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin:0;
+    padding:0 1rem
 }
 
 .site .site-content article .entry-content {
-    color: var(--gray-medium)777;
+    color:var(--gray-medium)
 }
 
 .site .site-content article .entry-footer {
-    background-color: var(--gray-light)bbb;
-    color: var(--gray-medium)777;
-    font-size: 0.8rem;
-    padding: 0.5rem;
-    text-align: right;
+    background-color:var(--gray-light);
+    color:var(--gray-medium);
+    font-size:.8rem;
+    padding:.5rem;
+    text-align:right
 }
 
 .site .site-content .widget-area {
-    float: right;
-    overflow: hidden;
-    width: 25%;
+    float:right;
+    overflow:hidden;
+    width:25%
 }
 
 .site .site-content .widget-area .search-field {
-    border-radius: 0;
-    display: block;
-    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    border-radius:0;
+    display:block;
+    font-family:"Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-left:auto;
+    margin-right:auto;
+    width:100%
 }
 
 .site .site-content .widget-area .search-submit {
-    background-color: var(--blue-primary);
-    border-radius: 0;
-    border: 1px var(--blue-primary) solid;
-    color: var(--blue-dark);
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
+    background-color:var(--blue-primary);
+    border-radius:0;
+    border:1px var(--blue-primary) solid;
+    color:var(--blue-dark);
+    display:block;
+    margin-left:auto;
+    margin-right:0;
+    margin-top:1em;
+    padding-left:2em;
+    padding-right:2em
 }
 
 .site .site-content .widget-area .widget .widget-title {
-    background-color: var(--blue-primary);
-    color: var(--blue-dark);
-    font-size: 1rem;
-    margin-bottom: 0;
-    padding: 0.5em;
+    background-color:var(--blue-primary);
+    color:var(--blue-dark);
+    font-size:1rem;
+    margin-bottom:0;
+    padding:.5em
 }
 
 .site .site-content .widget-area .widget ul {
-    background-color: var(--gray-lighter);
-    color: var(--gray-medium)777;
-    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 0.9rem;
-    list-style: none;
-    margin: 0;
-    padding: 1rem;
+    background-color:var(--gray-lighter);
+    color:var(--gray-medium);
+    font-family:"Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:.9rem;
+    list-style:none;
+    margin:0;
+    padding:1rem
 }
 
 .site .site-content .widget-area .widget ul li {
-    margin: 0.25rem 0;
-}
-
-.site .site-content .widget-area .widget:nth-child(3) .widget-title {
-    background-color: var(--blue-primary);
-    color: var(--blue-dark);
-}
-
-.site .site-content .widget-area .widget:nth-child(4) .widget-title, .archive-development h3 {
-    background-color: var(--green-light);
-    color: var(--green-dark);
-}
-
-.site .site-content .widget-area .widget:nth-child(5) .widget-title {
-    background-color: var(--red-light);
-    color: var(--red-dark);
-}
-
-.site .site-content .widget-area .widget:nth-child(6) .widget-title {
-    background-color: var(--green-light);
-    color: var(--green-dark);
-}
-
-.site .site-content .widget-area .widget:nth-child(7) .widget-title {
-    background-color: var(--orange-light);
-    color: var(--orange-dark);
+    margin:.25rem 0
 }
 
 .site .site-footer {
-    clear: both;
-    color: var(--gray-light)bbb;
-    margin: 3em;
-    width: 100%;
+    clear:both;
+    color:var(--gray-light);
+    margin:3em;
+    width:100%
 }
 
 .content-area {
-    float: left;
-    margin: 0 -25% 0 0;
-    width: 100%;
+    float:left;
+    margin:0 -25% 0 0;
+    width:100%
 }
 
 .site-main {
-    margin: 0 25% 0 0;
+    margin:0 25% 0 0
 }
 
 .comments-area {
-    background-color: var(--gray-lighter);
-    margin-bottom: 2em;
-    margin-right: 3em;
-    padding-bottom: 1em;
+    background-color:var(--gray-lighter);
+    margin-bottom:2em;
+    margin-right:3em;
+    padding-bottom:1em
 }
 
 .comments-area .comments-title {
-    background-color: var(--blue-primary);
-    color: var(--blue-dark);
-    font-size: 1rem;
-    padding: 1rem;
+    background-color:var(--blue-primary);
+    color:var(--blue-dark);
+    font-size:1rem;
+    padding:1rem
 }
 
-.comments-area .comment-list, .comments-area .comment-respond {
-    background-color: var(--gray-lighter);
-    color: var(--gray-medium)777;
-    font-family: "Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 0.9rem;
-    list-style: none;
-    margin: 0;
-    padding: 1rem 1rem 0;
+.comments-area .comment-list,.comments-area .comment-respond {
+    background-color:var(--gray-lighter);
+    color:var(--gray-medium);
+    font-family:"Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:.9rem;
+    list-style:none;
+    margin:0;
+    padding:1rem 1rem 0
 }
 
-.comments-area .comment-list .submit, .comments-area .comment-respond .submit {
-    background-color: var(--blue-primary);
-    border-radius: 0;
-    border: 1px var(--blue-primary) solid;
-    color: var(--blue-dark);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
+.comments-area .comment-list .submit,.comments-area .comment-respond .submit {
+    background-color:var(--blue-primary);
+    border-radius:0;
+    border:1px var(--blue-primary) solid;
+    color:var(--blue-dark);
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+    padding-left:2em;
+    padding-right:2em
 }
 
 .page-title {
-    color: var(--blue-primary);
-    font-size: 32px;
+    color:var(--blue-primary);
+    font-size:32px
 }
 
 .no-sidebar .content-area {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+    float:none;
+    margin-left:auto;
+    margin-right:auto
 }
 
 .no-sidebar .site-header {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:2rem;
+    padding-right:2rem
 }
 
 .no-sidebar .site-main {
-    margin-right: 0;
+    margin-right:0
 }
 
-.page-content, .entry-content, .entry-summary {
-    margin: 1.5em 0 0;
+.page-content,.entry-content,.entry-summary {
+    margin:1.5em 0 0
 }
 
 .page-links {
-    clear: both;
-    margin: 0 0 1.5em;
-    padding-bottom: 1rem;
+    clear:both;
+    margin:0 0 1.5em;
+    padding-bottom:1rem
 }
 
 .comment-content a {
-    word-wrap: break-word;
+    word-wrap:break-word
 }
 
-.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {
-    border: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 0;
+.page-content .wp-smiley,.entry-content .wp-smiley,.comment-content .wp-smiley {
+    border:none;
+    margin-bottom:0;
+    margin-top:0;
+    padding:0
 }
 
-embed, iframe, object {
-    max-width: 100%;
+embed,iframe,object {
+    max-width:100%
 }
 
 .custom-logo-link {
-    display: inline-block;
-    float: left;
-    margin: 0 1rem 0 -1rem;
-    width: 80px;
+    display:inline-block;
+    float:left;
+    margin:0 1rem 0 -1rem;
+    width:80px
 }
 
 .wp-caption {
-    margin-bottom: 1.5em;
-    max-width: 100%;
+    margin-bottom:1.5em;
+    max-width:100%
 }
 
 .wp-caption img[class*=wp-image-] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display:block;
+    margin-left:auto;
+    margin-right:auto
 }
 
 .wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
+    margin:.8075em 0
 }
 
-.wp-caption-text, .social-links {
-    text-align: center;
+.wp-caption-text,.social-links {
+    text-align:center
 }
 
 .gallery-item {
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    width: 100%;
+    display:inline-block;
+    text-align:center;
+    vertical-align:top;
+    width:100%
 }
 
 .gallery-columns-2 .gallery-item {
-    max-width: 50%;
+    max-width:50%
 }
 
 .gallery-columns-3 .gallery-item {
-    max-width: 33.33%;
+    max-width:33.33%
 }
 
 .gallery-columns-4 .gallery-item {
-    max-width: 25%;
+    max-width:25%
 }
 
 .gallery-columns-5 .gallery-item {
-    max-width: 20%;
+    max-width:20%
 }
 
 .gallery-columns-6 .gallery-item {
-    max-width: 16.66%;
+    max-width:16.66%
 }
 
 .gallery-columns-7 .gallery-item {
-    max-width: 14.28%;
+    max-width:14.28%
 }
 
 .gallery-columns-8 .gallery-item {
-    max-width: 12.5%;
+    max-width:12.5%
 }
 
 .gallery-columns-9 .gallery-item {
-    max-width: 11.11%;
-}
-
-.wp-block-list, .site .site-header .main-navigation .sub-menu li, table.has-fixed-layout {
-    margin: 0;
+    max-width:11.11%
 }
 
 .wp-block-quote {
-    margin: 0 5%;
-    padding: 1% 2%;
+    margin:0 5%;
+    padding:1% 2%
 }
 
 .wp-block-quote p {
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
+    font-style:italic;
+    font-weight:700;
+    margin:0
 }
 
-.wp-block-quote p::before, .wp-block-quote p::after {
-    content: "\"";
+.wp-block-quote p::before,.wp-block-quote p::after {
+    content:"\""
 }
 
 .wp-block-quote cite::before {
-    content: " - ";
-    margin-left: 1%;
+    content:" - ";
+    margin-left:1%
 }
 
 ol.wp-block-footnotes {
-    color: var(--gray-dark);
-    font-size: 80%;
-    margin-left: 0;
-    padding-left: 5%;
+    color:var(--gray-dark);
+    font-size:80%;
+    margin-left:0;
+    padding-left:5%
 }
 
 .site-title {
-    clear: none;
+    clear:none
 }
 
 .page-links a:last-child {
-    float: right;
-}
-
-.site .site-content .category-lets-play-baldurs-gate header, .site .site-content .post-4170 header, .parent-pageid-4170 .site .site-content header {
-    background-color: var(--orange-light);
-}
-
-.site .site-content .category-lets-play-baldurs-gate header a, .site .site-content .post-4170 header a, .parent-pageid-4170 .site .site-content header a, .site .site-content .category-lets-play-baldurs-gate header a:hover, .site .site-content .post-4170 header a:hover, .parent-pageid-4170 .site .site-content header a:hover, .site .site-content .category-lets-play-baldurs-gate header h1, .site .site-content .post-4170 header h1, .parent-pageid-4170 .site .site-content header h1 {
-    color: var(--orange-dark);
+    float:right
 }
 
 .widget_archive {
-    margin-bottom: 1em;
+    margin-bottom:1em
 }
 
-.archive-header, .nav-links {
-    margin-right: 3em;
+.archive-header,.nav-links {
+    margin-right:3em
 }
 
 .archive-columns h3 {
-    margin: 0;
-    padding: 0.1em 0.5em;
+    margin:0;
+    padding:.1em .5em
 }
 
-.archive-columns ul, .wp-block-archives-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.archive-columns ul,.wp-block-archives-list {
+    list-style-type:none;
+    margin:0;
+    padding:0
 }
 
-.archive-columns li, .wp-block-archives-list li {
-    padding: 0.5em;
+.archive-columns li,.wp-block-archives-list li {
+    padding:.5em
 }
 
 .archive-travel {
-    border: 1px solid var(--blue-primary);
-}
-
-.archive-travel h3 {
-    background-color: var(--blue-primary);
-    color: var(--blue-dark);
+    border:1px solid var(--blue-primary)
 }
 
 .archive-development {
-    border: 1px solid var(--green-light);
+    border:1px solid var(--green-light)
 }
 
-.archive-other {
-    border: 1px solid var(--gray-light);
-}
-
-.archive-other h3, .site .site-content .widget-area .widget:nth-child(8) .widget-title {
-    background-color: var(--gray-light);
-    color: var(--gray-dark);
+.archive-other h3,.site .site-content .widget-area .widget:nth-child(8) .widget-title {
+    background-color:var(--gray-light);
+    color:var(--gray-dark)
 }
 
 .archive-video-games {
-    border: 1px solid var(--orange-light);
-}
-
-.archive-video-games h3 {
-    background-color: var(--orange-light);
-    color: var(--orange-dark);
+    border:1px solid var(--orange-light)
 }
 
 .archive-writing {
-    border: 1px solid var(--red-light);
-}
-
-.archive-writing h3 {
-    background-color: var(--red-light);
-    color: var(--red-dark);
+    border:1px solid var(--red-light)
 }
 
 .wp-block-image img {
-    min-width: 100%;
+    min-width:100%
 }
 
 .wp-block-image figcaption {
-    color: var(--gray-dark);
-    font-size: smaller;
-    margin: 0.25em;
-    text-align: center;
+    color:var(--gray-dark);
+    font-size:smaller;
+    margin:.25em;
+    text-align:center
 }
 
 .wp-block-embed {
-    background: 0;
-    border: 0;
-    text-align: center;
+    background:0;
+    border:0;
+    text-align:center
 }
 
 .entry-header a:visited {
-    color: inherit;
+    color:inherit
 }
 
 .site .site-content .category-development header {
-    background-color: var(--gray-dark);
+    background-color:var(--gray-dark)
 }
 
-.site .site-content .category-development header a, .site .site-content .category-development header a:visited, .site .site-content .category-development header h1, .site .site-content .category-development header h2, .site .site-content .category-minecraft-modding header a:hover, .site .site-content .post-11708 header a:hover, .parent-pageid-11708 .site .site-content header a:hover, .parent-pageid-24958 .site .site-content header a:hover, .site .site-content .category-minecraft-mods header a:hover, .site .site-content .category-food header a, .site .site-content .category-cooking header a:visited, .site .site-content .category-food header h1, .site .site-content .category-food header h2 {
-    color: var(--gray-light);
+.site .site-content .category-development header a,.site .site-content .category-development header a:visited,.site .site-content .category-development header h1,.site .site-content .category-development header h2,.site .site-content .category-minecraft-modding header a:hover,.site .site-content .post-11708 header a:hover,.parent-pageid-11708 .site .site-content header a:hover,.parent-pageid-24958 .site .site-content header a:hover,.site .site-content .category-minecraft-mods header a:hover,.site .site-content .category-food header a,.site .site-content .category-cooking header a:visited,.site .site-content .category-food header h1,.site .site-content .category-food header h2 {
+    color:var(--gray-light)
 }
 
-.site .site-content .category-development header a:hover, .site .site-content .category-food header a:hover {
-    color: var(--gray-lighter);
+.site .site-content .category-development header a:hover,.site .site-content .category-food header a:hover {
+    color:var(--gray-lighter)
 }
 
-.site .site-content .category-development  header .entry-meta, .site .site-content .category-lets-play-baldurs-gate header a:hover, .site .site-content .category-playing-my-steam-library header a:hover, .site .site-content .post-13188 header a:hover, .site .site-content .category-language header a:hover, .site .site-content .category-language  header .entry-meta, .related-posts li.category-language a:hover {
-    color: var(--gray-medium);
+.site .site-content .category-productivity header,.site .site-content .category-web-development header,.site .site-content .category-minecraft-modding header,.site .site-content .post-11708 header,.parent-pageid-11708 .site .site-content header,.parent-pageid-24958 .site .site-content header {
+    background-color:var(--green-light)
 }
 
-.site .site-content .category-productivity header, .site .site-content .category-web-development header, .site .site-content .category-minecraft-modding header, .site .site-content .post-11708 header, .parent-pageid-11708 .site .site-content header, .parent-pageid-24958 .site .site-content header {
-    background-color: var(--green-light);
-}
-
-.site .site-content .category-productivity header a, .site .site-content .category-productivity header a:visited, .site .site-content .category-productivity header a:hover, .site .site-content .category-productivity header h1, .site .site-content .category-productivity header h2, .site .site-content .category-web-development header a, .site .site-content .category-web-development header a:visited, .site .site-content .category-web-development header a:hover, .site .site-content .category-web-development header h1, .site .site-content .category-web-development header h2, .site .site-content .category-minecraft-modding header a, .site .site-content .post-11708 header a, .parent-pageid-11708 .site .site-content header a, .site .site-content .category-minecraft-modding header a:visited, .site .site-content .post-11708 header a:visited, .parent-pageid-11708 .site .site-content header a:visited, .parent-pageid-24958 .site .site-content header a, .parent-pageid-24958 .site .site-content header a:visited, .site .site-content .category-minecraft-modding header h1, .site .site-content .post-11708 header h1, .parent-pageid-11708 .site .site-content header h1, .parent-pageid-24958 .site .site-content header h1, .site .site-content .category-minecraft-modding header h2, .site .site-content .post-11708 header h2, .parent-pageid-11708 .site .site-content header h2, .parent-pageid-24958 .site .site-content header h2, .related-posts li.category-minecraft-modding a, .related-posts li.category-minecraft-modding a:visited {
-    color: var(--green-dark);
-}
-
-.site .site-content .category-video-games header, .site .site-content .category-lets-play-baldurs-gate header {
-    background-color: var(--orange-light);
-}
-
-.site .site-content .category-video-games header a, .site .site-content .category-video-games header a:visited, .site .site-content .category-video-games header a:hover, .site .site-content .category-video-games header h1, .site .site-content .category-video-games header h2, .site .site-content .category-lets-play-baldurs-gate header a, .site .site-content .category-lets-play-baldurs-gate header a:visited, .site .site-content .category-lets-play-baldurs-gate header h1, .site .site-content .category-lets-play-baldurs-gate header h2, .related-posts li.category-lets-play-baldurs-gate a, .related-posts li.category-lets-play-baldurs-gate a:visited {
-    color: var(--orange-dark);
+.site .site-content .category-productivity header a,.site .site-content .category-productivity header a:visited,.site .site-content .category-productivity header a:hover,.site .site-content .category-productivity header h1,.site .site-content .category-productivity header h2,.site .site-content .category-web-development header a,.site .site-content .category-web-development header a:visited,.site .site-content .category-web-development header a:hover,.site .site-content .category-web-development header h1,.site .site-content .category-web-development header h2,.site .site-content .category-minecraft-modding header a,.site .site-content .post-11708 header a,.parent-pageid-11708 .site .site-content header a,.site .site-content .category-minecraft-modding header a:visited,.site .site-content .post-11708 header a:visited,.parent-pageid-11708 .site .site-content header a:visited,.parent-pageid-24958 .site .site-content header a,.parent-pageid-24958 .site .site-content header a:visited,.site .site-content .category-minecraft-modding header h1,.site .site-content .post-11708 header h1,.parent-pageid-11708 .site .site-content header h1,.parent-pageid-24958 .site .site-content header h1,.site .site-content .category-minecraft-modding header h2,.site .site-content .post-11708 header h2,.parent-pageid-11708 .site .site-content header h2,.parent-pageid-24958 .site .site-content header h2,.related-posts li.category-minecraft-modding a,.related-posts li.category-minecraft-modding a:visited {
+    color:var(--green-dark)
 }
 
 .site .site-content .category-minecraft-mods header {
-    background-color: var(--green-dark);
+    background-color:var(--green-dark)
 }
 
-.site .site-content .category-minecraft-mods header a, .site .site-content .category-minecraft-mods header a:visited, .site .site-content .category-minecraft-mods header h1, .site .site-content .category-minecraft-mods header h2, .related-posts li.category-minecraft-mods a, .related-posts li.category-minecraft-mods a:visited {
-    color: var(--green-light);
+.site .site-content .category-minecraft-mods header a,.site .site-content .category-minecraft-mods header a:visited,.site .site-content .category-minecraft-mods header h1,.site .site-content .category-minecraft-mods header h2,.related-posts li.category-minecraft-mods a,.related-posts li.category-minecraft-mods a:visited {
+    color:var(--green-light)
 }
 
-.site .site-content .category-playing-my-steam-library header, .site .site-content .post-13188 header, .site .site-content .category-other header, .site .site-content .category-announcement header, .site .site-content .category-cooking header, .site .site-content .category-film header {
-    background-color: var(--gray-light);
+.site .site-content .category-playing-my-steam-library header,.site .site-content .post-13188 header,.site .site-content .category-other header,.site .site-content .category-announcement header,.site .site-content .category-cooking header,.site .site-content .category-film header {
+    background-color:var(--gray-light)
 }
 
-.site .site-content .category-playing-my-steam-library header a, .site .site-content .post-13188 header a, .site .site-content .category-playing-my-steam-library header a:visited, .site .site-content .post-13188 header a:visited, .site .site-content .category-playing-my-steam-library header h1, .site .site-content .post-13188 header h1, .site .site-content .category-playing-my-steam-library header h2, .site .site-content .post-13188 header h2, .site .site-content .category-travel header a:hover, .site .site-content .category-travel header a:hover, .site .site-content .category-writing header a:hover, .site .site-content .category-writing header a:hover, .site .site-content .category-media header a:hover, .site .site-content .category-other header a, .site .site-content .category-other header a:visited, .site .site-content .category-other header a:hover, .site .site-content .category-other header h1, .site .site-content .category-other header h2, .site .site-content .category-announcement header a, .site .site-content .category-announcement header a:visited, .site .site-content .category-announcement header a:hover, .site .site-content .category-announcement header h1, .site .site-content .category-announcement header h2, .site .site-content .category-cooking header a, .site .site-content .category-cooking header a:visited, .site .site-content .category-cooking header a:hover, .site .site-content .category-cooking header h1, .site .site-content .category-cooking header h2, .site .site-content .category-film header a, .site .site-content .category-film header a:visited, .site .site-content .category-film header a:hover, .site .site-content .category-film header h1, .site .site-content .category-film header h2, .related-posts a:hover, .related-posts li.category-media a:hover, .related-posts li.category-playing-my-steam-library a, .related-posts li.category-playing-my-steam-library a:visited {
-    color: var(--gray-dark);
+.site .site-content .post-13173 header,.site .site-content .category-writing header,.site .site-content .category-media header {
+    background-color:var(--red-light)
 }
 
-.site .site-content .post-13173 header, .site .site-content .category-writing header, .site .site-content .category-media header {
-    background-color: var(--red-light);
+.site .site-content .post-13173 header a,.site .site-content .post-13173 header a:hover,.site .site-content .post-13173 header a:visited,.site .site-content .post-13173 header h1,.site .site-content .post-13173 header h2,.site .site-content .category-writing header a,.site .site-content .category-writing header a:visited,.site .site-content .category-writing header h1,.site .site-content .category-writing header h2,.site .site-content .category-media header a,.site .site-content .category-book header a:visited,.site .site-content .category-media header h1,.site .site-content .category-book header h2,.related-posts li.category-media a,.related-posts li.category-media a:visited {
+    color:var(--red-dark)
 }
 
-.site .site-content .post-13173 header a, .site .site-content .post-13173 header a:hover, .site .site-content .post-13173 header a:visited, .site .site-content .post-13173 header h1, .site .site-content .post-13173 header h2, .site .site-content .category-writing header a, .site .site-content .category-writing header a:visited, .site .site-content .category-writing header h1, .site .site-content .category-writing header h2, .site .site-content .category-media header a, .site .site-content .category-book header a:visited, .site .site-content .category-media header h1, .site .site-content .category-book header h2, .related-posts li.category-media a, .related-posts li.category-media a:visited {
-    color: var(--red-dark);
-}
-
-.site .site-content .category-travel header {
-    background-color: var(--blue-primary);
-}
-
-.site .site-content .category-travel header a, .site .site-content .category-travel header a:visited, .site .site-content .category-travel header h1, .site .site-content .category-travel header h2, .related-posts a, .related-posts a:visited {
-    color: var(--blue-dark);
+.site .site-content .category-travel header a,.site .site-content .category-travel header a:visited,.site .site-content .category-travel header h1,.site .site-content .category-travel header h2,.related-posts a,.related-posts a:visited {
+    color:var(--blue-dark)
 }
 
 .site .site-content .category-language header {
-    background-color: var(--red-dark);
+    background-color:var(--red-dark)
 }
 
-.site .site-content .category-language header a, .site .site-content .category-language header a:visited, .site .site-content .category-language header h1, .site .site-content .category-language header h2, .related-posts li.category-language a, .related-posts li.category-language a:visited {
-    color: var(--red-light);
+.site .site-content .category-language header a,.site .site-content .category-language header a:visited,.site .site-content .category-language header h1,.site .site-content .category-language header h2,.related-posts li.category-language a,.related-posts li.category-language a:visited {
+    color:var(--red-light)
 }
 
 .site .site-content .category-food header {
-    background-color: var(--gray-medium);
+    background-color:var(--gray-medium)
 }
 
 .wp-block-media-text {
-    padding-bottom: 1em;
+    padding-bottom:1em
 }
 
 .related-posts {
-    background: white;
-    margin: 0 3em 3em 0;
-    padding-bottom: 0.2em;
+    background:#fff;
+    margin:0 3em 3em 0;
+    padding-bottom:.2em
 }
 
 .related-posts h2 {
-    background: var(--blue-primary);
-    color: var(--blue-dark);
-    padding: 1em;
-    text-align: center;
+    background:var(--blue-primary);
+    color:var(--blue-dark);
+    padding:1em;
+    text-align:center
 }
 
 .related-posts h3 {
-    margin: 1rem 0 0.5rem;
-    padding: 1rem 0 0 1rem;
+    margin:1rem 0 .5rem;
+    padding:1rem 0 0 1rem
 }
 
 .related-posts ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style:none;
+    margin:0;
+    padding:0
 }
 
 .related-posts li {
-    background: var(--blue-primary);
-    color: var(--blue-dark);
-    margin: 1em;
+    background:var(--blue-primary);
+    color:var(--blue-dark);
+    margin:1em
 }
 
 .related-posts li.category-media {
-    background: var(--red-light);
+    background:var(--red-light)
 }
 
 .related-posts li.category-lets-play-baldurs-gate {
-    background: var(--orange-light);
+    background:var(--orange-light)
 }
 
-.related-posts li.category-playing-my-steam-library, thead {
-    background: var(--gray-light);
+.related-posts li.category-playing-my-steam-library,thead {
+    background:var(--gray-light)
 }
 
 .related-posts li.category-minecraft-modding {
-    background: var(--green-light);
+    background:var(--green-light)
 }
 
 .related-posts li.category-minecraft-mods {
-    background: var(--green-dark);
+    background:var(--green-dark)
 }
 
 .related-posts li.category-language {
-    background: var(--red-dark);
+    background:var(--red-dark)
 }
 
 .related-posts img {
-    display: block;
-    width: 100%;
+    display:block;
+    width:100%
 }
 
 .related-posts p {
-    color: var(--blue-dark);
-    margin: 0.5em 1em;
-    padding-top: 0.5em;
-}
-
-.nav-links a {
-    color: var(--blue-primary);
+    color:var(--blue-dark);
+    margin:.5em 1em;
+    padding-top:.5em
 }
 
 .social-links img {
-    margin: 1% 2%;
-    width: 10%;
+    margin:1% 2%;
+    width:10%
 }
 
 .widget-area {
-    padding-top: 2em;
+    padding-top:2em
 }
 
 .archive-description p {
-    background: var(--blue-dark);
-    color: var(--blue-primary);
-    margin: 0;
-    padding: 1em 1em 0;
+    background:var(--blue-dark);
+    color:var(--blue-primary);
+    margin:0;
+    padding:1em 1em 0
 }
 
 .menu-toggle {
-    background-color: var(--blue-dark);
-    border-radius: 0;
-    border: 0;
-    color: var(--blue-primary);
-    width: 100%;
-}
-
-.menu-toggle:hover {
-    background-color: var(--blue-primary);
-    color: var(--blue-dark);
+    background-color:var(--blue-dark);
+    border-radius:0;
+    border:0;
+    color:var(--blue-primary);
+    width:100%
 }
 
 footer p {
-    margin: 0;
-    text-align: center;
+    margin:0;
+    text-align:center
 }
 
 .tagcloud {
-    background: var(--gray-light);
-    border: 1px solid var(--gray-dark);
-    margin-bottom: 2em;
-    padding: 1em;
+    background:var(--gray-light);
+    border:1px solid var(--gray-dark);
+    margin-bottom:2em;
+    padding:1em
 }
 
 input {
-    font-family: revert;
+    font-family:revert
 }
 
 input[type=submit] {
-    background-color: var(--blue-primary);
-    border-radius: 0;
-    border: 1px var(--blue-primary) solid;
-    color: var(--blue-dark);
-    font-family: "C64", sans-serif;
+    background-color:var(--blue-primary);
+    border-radius:0;
+    border:1px var(--blue-primary) solid;
+    color:var(--blue-dark);
+    font-family:"C64",sans-serif
 }
 
 .page header {
-    padding: 0 1em 1em;
-}
-
-article blockquote p::before {
+    padding:0 1em 1em
 }
 
 article blockquote p::after {
-    content: close-quote;
+    content:close-quote
 }
 
 article blockquote {
-    background: var(--gray-light);
-    color: var(--gray-dark);
-    padding: 1rem;
-    quotes: "“" "”" "‘" "’";
+    background:var(--gray-light);
+    color:var(--gray-dark);
+    padding:1rem;
+    quotes:"“" "”" "‘" "’"
 }
 
 .icon figure {
-    background: none;
-    border: none;
+    background:none;
+    border:none
 }
 
 .wp-block-media-text.has-media-on-the-right > .wp-block-media-text__content {
-    padding-left: 0;
+    padding-left:0
 }
 
 figure.wp-block-table {
-    background: var(--gray-lighter);
+    background:var(--gray-lighter)
 }
 
 .progress-bar {
-    background: linear-gradient(to right,var(--green-dark) 1.82648401826%,var(--green-light) 6.16438356164%,var(--yellow-light) 13.9269406393%,var(--gray-light) 0%);
-    border: 1px solid var(--gray-dark);
+    background:linear-gradient(to right,var(--green-dark) 1.82648401826%,var(--green-light) 6.16438356164%,var(--yellow-light) 13.9269406393%,var(--gray-light) 0%);
+    border:1px solid var(--gray-dark)
+}
+
+button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]:hover,button:active,button:focus,input[type=button]:active,input[type=button]:focus,input[type=reset]:active,input[type=reset]:focus,input[type=submit]:active,input[type=submit]:focus {
+    border-color:var(--gray-medium-dark) var(--gray-light) var(--gray-lighter)
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,input[type=password]:focus,input[type=search]:focus,input[type=number]:focus,input[type=tel]:focus,input[type=range]:focus,input[type=date]:focus,input[type=month]:focus,input[type=week]:focus,input[type=time]:focus,input[type=datetime]:focus,input[type=datetime-local]:focus,input[type=color]:focus,textarea:focus,.site .site-content .category-playing-my-steam-library header a,.site .site-content .post-13188 header a,.site .site-content .category-playing-my-steam-library header a:visited,.site .site-content .post-13188 header a:visited,.site .site-content .category-playing-my-steam-library header h1,.site .site-content .post-13188 header h1,.site .site-content .category-playing-my-steam-library header h2,.site .site-content .post-13188 header h2,.site .site-content .category-travel header a:hover,.site .site-content .category-travel header a:hover,.site .site-content .category-writing header a:hover,.site .site-content .category-writing header a:hover,.site .site-content .category-media header a:hover,.site .site-content .category-other header a,.site .site-content .category-other header a:visited,.site .site-content .category-other header a:hover,.site .site-content .category-other header h1,.site .site-content .category-other header h2,.site .site-content .category-announcement header a,.site .site-content .category-announcement header a:visited,.site .site-content .category-announcement header a:hover,.site .site-content .category-announcement header h1,.site .site-content .category-announcement header h2,.site .site-content .category-cooking header a,.site .site-content .category-cooking header a:visited,.site .site-content .category-cooking header a:hover,.site .site-content .category-cooking header h1,.site .site-content .category-cooking header h2,.site .site-content .category-film header a,.site .site-content .category-film header a:visited,.site .site-content .category-film header a:hover,.site .site-content .category-film header h1,.site .site-content .category-film header h2,.related-posts a:hover,.related-posts li.category-media a:hover,.related-posts li.category-playing-my-steam-library a,.related-posts li.category-playing-my-steam-library a:visited {
+    color:var(--gray-dark)
+}
+
+select,.archive-other {
+    border:1px solid var(--gray-light)
+}
+
+a:visited,.site .site-content .category-development header .entry-meta,.site .site-content .category-lets-play-baldurs-gate header a:hover,.site .site-content .category-playing-my-steam-library header a:hover,.site .site-content .post-13188 header a:hover,.site .site-content .category-language header a:hover,.site .site-content .category-language header .entry-meta,.related-posts li.category-language a:hover {
+    color:var(--gray-medium)
+}
+
+a:hover,a:focus,a:active,.nav-links a {
+    color:var(--blue-primary)
+}
+
+.widget,.wp-block-list,.site .site-header .main-navigation .sub-menu li,table.has-fixed-layout {
+    margin:0
+}
+
+.site .site-header .main-navigation a:hover,.site .site-content .widget-area .widget:nth-child(3) .widget-title,.archive-travel h3,.menu-toggle:hover {
+    background-color:var(--blue-primary);
+    color:var(--blue-dark)
+}
+
+.site .site-content article header,.archive-header,.site .site-content .category-travel header {
+    background-color:var(--blue-primary)
+}
+
+.site .site-content .widget-area .widget:nth-child(4) .widget-title,.archive-development h3,.site .site-content .widget-area .widget:nth-child(6) .widget-title {
+    background-color:var(--green-light);
+    color:var(--green-dark)
+}
+
+.site .site-content .widget-area .widget:nth-child(5) .widget-title,.archive-writing h3 {
+    background-color:var(--red-light);
+    color:var(--red-dark)
+}
+
+.site .site-content .widget-area .widget:nth-child(7) .widget-title,.archive-video-games h3 {
+    background-color:var(--orange-light);
+    color:var(--orange-dark)
+}
+
+.site .site-content .category-lets-play-baldurs-gate header,.site .site-content .post-4170 header,.parent-pageid-4170 .site .site-content header,.site .site-content .category-video-games header,.site .site-content .category-lets-play-baldurs-gate header {
+    background-color:var(--orange-light)
+}
+
+.site .site-content .category-lets-play-baldurs-gate header a,.site .site-content .post-4170 header a,.parent-pageid-4170 .site .site-content header a,.site .site-content .category-lets-play-baldurs-gate header a:hover,.site .site-content .post-4170 header a:hover,.parent-pageid-4170 .site .site-content header a:hover,.site .site-content .category-lets-play-baldurs-gate header h1,.site .site-content .post-4170 header h1,.parent-pageid-4170 .site .site-content header h1,.site .site-content .category-video-games header a,.site .site-content .category-video-games header a:visited,.site .site-content .category-video-games header a:hover,.site .site-content .category-video-games header h1,.site .site-content .category-video-games header h2,.site .site-content .category-lets-play-baldurs-gate header a,.site .site-content .category-lets-play-baldurs-gate header a:visited,.site .site-content .category-lets-play-baldurs-gate header h1,.site .site-content .category-lets-play-baldurs-gate header h2,.related-posts li.category-lets-play-baldurs-gate a,.related-posts li.category-lets-play-baldurs-gate a:visited {
+    color:var(--orange-dark)
 }
 
 @media screen and (min-width:37.5em) {
     .menu-toggle {
-        display: none;
+        display:none
     }
+
     .main-navigation ul {
-        display: block;
+        display:block
     }
 }
 
 @media screen and (max-width:45em) {
     body {
-        background: var(--blue-primary);
+        background:var(--blue-primary)
     }
+
     .site {
-        margin: 5%;
+        margin:5%
     }
+
     .site .site-header {
-        font-size: 0.6em;
+        font-size:.6em
     }
-    .site .site-content .widget-area, .site .site-content article .entry-footer, .menu-item-home, .enlighter-t-enlighter.enlighter-linenumbers div.enlighter div:before {
-        display: none;
+
+    .site .site-content .widget-area,.site .site-content article .entry-footer,.menu-item-home,.enlighter-t-enlighter.enlighter-linenumbers div.enlighter div:before {
+        display:none
     }
+
     .site .site-content {
-        padding: 0 1em;
+        padding:0 1em
     }
-    .site-main, .site .site-content article, .related-posts, .nav-links {
-        font-size: 0.8em;
-        margin: 0;
+
+    .site-main,.site .site-content article,.related-posts,.nav-links {
+        font-size:.8em;
+        margin:0
     }
+
     .site .site-footer {
-        font-size: 0.7em;
-        margin: 1em;
+        font-size:.7em;
+        margin:1em
     }
+
     .content-area {
-        margin-bottom: 1em;
+        margin-bottom:1em
     }
+
     .menu-item {
-        width: 100%;
+        width:100%
     }
+
     .comments-area {
-        margin: 1em 0;
+        margin:1em 0
     }
-    .comments-area .comment-respond, div.enlighter div {
-        font-size: 0.8em;
+
+    .comments-area .comment-respond,div.enlighter div {
+        font-size:.8em
     }
+
     .logged-in-as a {
-        display: block;
+        display:block
     }
+
     .comments-area .comment-respond input {
-        max-width: 100%;
+        max-width:100%
     }
+
     code {
-        font-size: 1em;
+        font-size:1em
     }
 }
